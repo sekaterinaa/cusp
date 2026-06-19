@@ -1,0 +1,46 @@
+@import "tailwindcss" source(none);
+@source "../**/*.{js,ts,jsx,tsx}";
+
+/* Register font-family utilities so `font-aeonik` / `font-inter` generate CSS.
+   Without these tokens, Tailwind v4 emits nothing and text falls back to the body font. */
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-aeonik: "Aeonik", "Inter", sans-serif;
+}
+
+/* Aeonik (trial) — files live in public/fonts/ (see README there). */
+@font-face {
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Aeonik-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Aeonik-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeonik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Aeonik-Semibold.woff2") format("woff2");
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}

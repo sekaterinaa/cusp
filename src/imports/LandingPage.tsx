@@ -12,7 +12,6 @@ import RatingsBar from "../app/components/RatingsBar";
 import GetAppWidget from "../app/components/GetAppWidget";
 import DownloadCUSP from "../app/components/DownloadCUSP";
 import videoHeroPhone from "../assets/hero-phone-white.mov";
-import imgHeroBgBlur from "../assets/hero-bg-blur.png";
 import videoHeroDesert from "../assets/hero-desert-bg-upscaled.mp4";
 import logoCuspLight from "../assets/sections/black-main-logo-without-trademark.svg";
 import pressGulfBusiness from "../assets/sections/press-gulfbusiness.svg";
@@ -23,29 +22,13 @@ import imgTrustIconShield from "../assets/sections/trust-icon-shield.svg";
 import imgTrustIconUmbrella from "../assets/sections/trust-icon-umbrella.svg";
 import imgTrustIconCheck from "../assets/sections/trust-icon-check.svg";
 import imgTrustIconWallet from "../assets/sections/trust-icon-wallet.svg";
-
-const imgYouImage1 = "https://www.figma.com/api/mcp/asset/85f9fee4-728e-4282-9bf3-afbfb56ac642";
-const imgImage583325 = "https://www.figma.com/api/mcp/asset/6f7f1b6f-a28b-4644-addf-6d4ce628e035";
-const imgImage583324 = "https://www.figma.com/api/mcp/asset/f2250d47-05f9-4ed7-a55f-a1fd12d335a6";
-const imgYoutubeCover12807202 = "https://www.figma.com/api/mcp/asset/f0db2628-2c00-4779-a630-73dc01db121e";
-const img647A8716A1 = "https://www.figma.com/api/mcp/asset/6321a584-866b-499b-b1e2-2795f73c50c8";
-const img647A8760A1 = "https://www.figma.com/api/mcp/asset/0115d1de-68e0-4854-8869-e9aab80cfce6";
-const img647A9213A1 = "https://www.figma.com/api/mcp/asset/98ac0b72-0c41-4cd9-bef6-d513b0ca00b0";
-const img647A9772A1 = "https://www.figma.com/api/mcp/asset/1329b408-951e-4f07-b6c4-30596407b8bf";
-const imgEllipse4 = "https://www.figma.com/api/mcp/asset/ddbd2854-940b-4b71-ad89-5113b4177610";
-const imgEllipse5 = "https://www.figma.com/api/mcp/asset/0ebbbe0e-54c1-4adb-b865-081a95e7bb13";
-const imgGroup2085663158 = "https://www.figma.com/api/mcp/asset/b1854765-2570-49e6-88b8-9fae9e30dc6d";
-const imgGroup2085662947 = "https://www.figma.com/api/mcp/asset/c8799416-ac3d-43a7-8367-5a62fab44f9f";
+import imgMissionCover from "../assets/sections/mission-cover.png";
 
 export default function LandingPage() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[24px] relative size-full" data-node-id="842:5539">
       <div className="flex w-full flex-col items-center px-[24px]" data-name="hero-screen">
         <div className="relative w-full h-[80vh] overflow-clip rounded-[32px] bg-[#1a110a]" data-node-id="859:12535" data-name="hero">
-          <div className="absolute left-0 top-[-42px] h-[699px] w-[1280px] max-w-none" data-node-id="859:12536" style={{ backgroundImage: "linear-gradient(182.67deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)" }} />
-          <div className="absolute -inset-[64px] blur-[48px]" data-node-id="859:12804">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHeroBgBlur} />
-          </div>
           <div className="absolute inset-0 overflow-clip" data-node-id="898:16167" data-name="hero-desert-bg">
             <video className="absolute inset-0 max-w-none object-cover object-center pointer-events-none size-full" src={videoHeroDesert} autoPlay muted loop playsInline />
           </div>
@@ -187,8 +170,8 @@ export default function LandingPage() {
       <div className="content-stretch flex w-full flex-col items-stretch pt-[44px] px-[24px] relative shrink-0">
         <GoalCardsStack />
       </div>
-      <InvestWays />
       <InvestOptions />
+      <InvestWays />
       <RetirementCalculator />
       <div className="content-stretch flex items-center px-[24px] relative shrink-0 w-full" data-node-id="842:5837">
         <div className="content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip px-[24px] py-[64px] relative rounded-[32px]" data-node-id="842:5838" style={{ backgroundColor: "rgb(253, 246, 235)", backgroundImage: "linear-gradient(108.19141153114029deg, rgb(255, 240, 226) 30.82%, rgb(255, 247, 237) 122.93%, rgb(221, 116, 15) 148.31%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1232 694.95' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(0.0000057125 -123.58 109.67 0.000025204 615.79 1235.8)'><stop stop-color='rgba(251,248,244,1)' offset='0'/><stop stop-color='rgba(195,190,186,1)' offset='0.25'/><stop stop-color='rgba(167,161,156,1)' offset='0.375'/><stop stop-color='rgba(139,133,127,1)' offset='0.5'/><stop stop-color='rgba(110,104,98,1)' offset='0.625'/><stop stop-color='rgba(82,75,69,1)' offset='0.75'/><stop stop-color='rgba(54,46,39,1)' offset='0.875'/><stop stop-color='rgba(40,31,25,1)' offset='0.9375'/><stop stop-color='rgba(26,17,10,1)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(90deg, rgb(252, 248, 239) 0%, rgb(252, 248, 239) 100%)" }}>
@@ -198,50 +181,10 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="h-[411.75px] overflow-clip relative rounded-[32px] shrink-0 w-[732px]" data-node-id="842:5841" data-name="youtube cover_1280х720_2">
-            <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[32px]">
-              <div className="absolute inset-0 rounded-[32px]" style={{ backgroundImage: "linear-gradient(0deg, rgb(26, 17, 10) 0%, rgb(250, 247, 238) 100%), linear-gradient(1.3270602159367542deg, rgb(221, 116, 15) 304.66%, rgb(249, 245, 240) 35.394%), linear-gradient(180.00000000080541deg, rgb(255, 252, 249) 1.3071%, rgb(248, 242, 236) 120%), linear-gradient(90deg, rgb(251, 248, 244) 0%, rgb(251, 248, 244) 100%)" }} />
-              <img alt="" className="absolute max-w-none object-cover rounded-[32px] size-full" src={imgYoutubeCover12807202} />
-              <div className="absolute inset-0 rounded-[32px]" style={{ backgroundImage: "linear-gradient(178.80815861329546deg, rgb(210, 173, 141) 1.7833%, rgb(26, 17, 10) 104.58%), linear-gradient(90deg, rgb(225, 113, 5) 0%, rgb(225, 113, 5) 100%), linear-gradient(0deg, rgb(225, 113, 5) 0%, rgb(250, 247, 238) 100%)" }} />
-            </div>
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[32px] size-full" src={imgMissionCover} loading="lazy" decoding="async" />
             <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] absolute font-aeonik font-normal inset-[7%_45.11%_75.03%_3.59%] leading-[normal] not-italic text-[#faf7ee] text-[40.031px]" data-node-id="842:5846">
               Driven by purpose, guided by values
             </p>
-            <div className="absolute inset-[38.33%_-12.1%_-32.11%_-40.45%]" data-node-id="842:5848">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2085663158} />
-            </div>
-            <div className="absolute contents left-[191.51px] top-[83.15px]" data-node-id="842:5853">
-              <div className="absolute h-[392.134px] left-[calc(58.33%-19.37px)] top-[83.15px] w-[264.349px]" data-node-id="842:5854" data-name="647A8716a 1">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647A8716A1} />
-              </div>
-              <div className="absolute h-[393.361px] left-[191.51px] top-[99.24px] w-[263.441px]" data-node-id="842:5855" data-name="647A8760a 1">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647A8760A1} />
-              </div>
-              <div className="absolute contents left-[calc(25%+104.41px)] top-[137.55px]" data-node-id="842:5856">
-                <div className="absolute h-[256.482px] left-[calc(25%+104.41px)] shadow-[-1.144px_1.144px_5.89px_0px_rgba(0,0,0,0.25),5.931px_2.372px_11.862px_0px_rgba(0,0,0,0.25)] top-[259.65px] w-[252.39px]" data-node-id="842:5857" data-name="647A9213a 1">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <img alt="" className="absolute h-[147.61%] left-0 max-w-none top-[-47.61%] w-full" src={img647A9213A1} />
-                  </div>
-                </div>
-                <div className="absolute h-[378.585px] left-[calc(25%+104.41px)] top-[137.55px] w-[252.39px]" data-node-id="842:5858" data-name="647A9213a 2">
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647A9213A1} />
-                </div>
-              </div>
-              <div className="absolute contents left-[calc(91.67%-136.74px)] top-[99.65px]" data-node-id="842:5859">
-                <div className="absolute h-[229.337px] left-[calc(91.67%-136.74px)] shadow-[0px_2.372px_11.862px_0px_rgba(0,0,0,0.25)] top-[249.9px] w-[253.057px]" data-node-id="842:5860" data-name="647A9772a 1">
-                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <img alt="" className="absolute h-[165.51%] left-0 max-w-none top-[-65.51%] w-full" src={img647A9772A1} />
-                  </div>
-                </div>
-                <div className="absolute h-[379.586px] left-[calc(91.67%-136.74px)] top-[99.65px] w-[253.057px]" data-node-id="842:5861" data-name="647A9772a 2">
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647A9772A1} />
-                </div>
-              </div>
-            </div>
-            <div className="absolute contents inset-[89.64%_81.44%_6.39%_3.59%]" data-node-id="842:5863">
-              <div className="absolute inset-[89.64%_81.44%_6.39%_3.59%]" data-node-id="842:5864">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2085662947} />
-              </div>
-            </div>
           </div>
           <div className="content-stretch flex flex-col items-center relative shrink-0" data-node-id="842:5868">
             <Button>Create account</Button>

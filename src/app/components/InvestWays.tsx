@@ -20,7 +20,7 @@ const slides: Slide[] = [
     image: imgSlide1,
   },
   {
-    title: "AI insights to make your portfolio stronger",
+    title: "AI insights. Stronger portfolio",
     description:
       "A 0\u201310 portfolio score and four pillar insights tell you what's working, what isn't, and what to do about it \u2014 no jargon required",
     image: imgSlide2,
@@ -103,7 +103,7 @@ export default function InvestWays() {
       data-node-id="827:2593"
     >
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden px-[24px]">
-        <div className="flex w-full max-w-[1100px] flex-col items-center">
+        <div className="flex w-full max-w-[1100px] flex-col items-center rounded-[32px] bg-[#fafafa] px-[44px] py-[64px]">
           <div className="flex w-full items-center justify-between gap-[40px]">
           <div className="flex w-[383px] shrink-0 items-start gap-[29px]">
             <div className="relative w-[4px] shrink-0" style={{ height: TRACK_HEIGHT }}>

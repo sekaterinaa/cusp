@@ -38,7 +38,7 @@ export default function InvestOptions() {
   return (
     <div className="content-stretch flex items-center px-[24px] relative shrink-0 w-full" data-node-id="1013:26310">
       <div
-        className="content-stretch flex flex-col gap-[32px] items-center overflow-clip px-[24px] py-[60px] relative rounded-[32px] shrink-0 w-full bg-[#fafafa]"
+        className="content-stretch flex flex-col gap-[32px] items-center overflow-clip px-[24px] py-[60px] relative rounded-[32px] shrink-0 w-full"
         data-node-id="1013:26241"
       >
         <p className="font-aeonik font-normal leading-[56px] relative shrink-0 text-[48px] text-black text-center tracking-[-0.96px] w-[434px]">
@@ -50,7 +50,7 @@ export default function InvestOptions() {
             {options.map((option) => (
               <div
                 key={option.title}
-                className="bg-white border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch"
+                className="bg-[#fafafa] border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch"
               >
                 <div className="flex h-[127px] items-center justify-center relative shrink-0">
                   <img src={option.image} alt="" className={option.imageClassName} />

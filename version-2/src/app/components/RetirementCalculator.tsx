@@ -22,7 +22,7 @@ export default function RetirementCalculator() {
                 <p className="font-aeonik font-normal leading-[43px] relative shrink-0 text-[#1d1611] text-[48px] tracking-[-0.72px] w-full" data-node-id="928:19287">
                   See what&rsquo;s possible
                 </p>
-                <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-full" data-node-id="928:19288">{`Build passive income by seeing what you can earn with CUSP Wealth's Personalised Portfolios, starting from $25 `}</p>
+                <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-full" data-node-id="928:19288">{`Explore how your investment could look over time \u2013 with lower fees and a $25 starting deposit.`}</p>
               </div>
               <div className="content-stretch flex flex-col gap-[15.328px] items-start relative shrink-0 w-full" data-node-id="928:19289">
                 <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="928:19290">

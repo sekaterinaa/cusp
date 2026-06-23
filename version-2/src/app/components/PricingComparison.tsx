@@ -153,18 +153,18 @@ export default function PricingComparison() {
               <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-full items-center justify-center min-w-px overflow-clip pb-[126px] pl-[29px] pr-[30px] pt-[124px] relative rounded-[32px]" data-node-id="928:19405">
                 <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
                 <p className="-translate-x-1/2 [word-break:break-word] absolute font-aeonik font-normal leading-[29.333px] left-[calc(50%-1px)] not-italic text-[28px] text-white text-center top-[179.5px] w-[212.5px]" data-node-id="859:11439">
-                  basic commission
+                  trading fees
                 </p>
                 <div className="-translate-x-1/2 absolute backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center left-[calc(50%-0.84px)] p-[18.057px] rounded-[27.086px] top-[53.5px] w-[138.814px]" data-node-id="859:11440" style={{ backgroundImage: goldBadgeGradient }}>
                   <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-black whitespace-nowrap">
-                    0%
+                    $0
                   </p>
                 </div>
               </div>
               <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-full items-center justify-center min-w-px overflow-clip pb-[126px] pl-[29px] pr-[30px] pt-[124px] relative rounded-[32px]" data-node-id="928:19410">
                 <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
                 <p className="-translate-x-1/2 [word-break:break-word] absolute font-aeonik font-normal leading-[29.333px] left-[calc(50%-1px)] not-italic text-[28px] text-white text-center top-[159.5px] w-[212.5px]" data-node-id="859:11443">
-                  portfolio management fee
+                  portfolio advisory fee
                 </p>
                 <div className="-translate-x-1/2 absolute backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center left-[calc(50%-0.43px)] p-[18.057px] rounded-[27.086px] top-[53.5px] w-[138.814px]" data-node-id="859:11444" style={{ backgroundImage: goldBadgeGradient }}>
                   <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-black whitespace-nowrap">
@@ -176,10 +176,10 @@ export default function PricingComparison() {
             <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-col gap-[10px] items-start overflow-clip pl-[29px] pr-[30px] py-[45px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19415">
               <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
               <p className="[word-break:break-word] font-aeonik font-normal leading-[29.333px] min-w-full not-italic relative shrink-0 text-[28px] text-white w-[min-content] z-[1]" data-node-id="928:19416">
-                Withdraw any time
+                Withdraw anytime
               </p>
               <p className="[word-break:break-word] font-inter font-normal leading-[24px] not-italic relative shrink-0 text-[16px] text-white tracking-[-0.16px] w-[279px] z-[1]" data-node-id="928:19417">
-                No lock-ins, no limits. Your money stays yours — withdraw whenever you want, however much you need.
+                No lock-ins &ndash; ever. We&rsquo;ll process your request quickly and keep you informed every step of the way.
               </p>
               {/* Coin stack */}
               <div className="absolute right-[-94px] size-[278px] top-[-37.47px] pointer-events-none" data-node-id="930:22224">

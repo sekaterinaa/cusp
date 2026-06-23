@@ -49,7 +49,7 @@ export default function LandingPage() {
           <div className="absolute inset-0 overflow-clip" data-node-id="898:16167" data-name="hero-desert-bg">
             <video className="absolute inset-0 max-w-none object-cover object-center pointer-events-none size-full" src={videoHeroDesert} autoPlay muted loop playsInline />
           </div>
-          <div className="fixed z-50 backdrop-blur-[10px] bg-[rgba(255,255,255,0.32)] text-white content-stretch flex items-center justify-between left-[calc(24px+3.13%)] right-[calc(24px+3.13%)] top-[30px] overflow-clip px-[20px] py-[4px] rounded-[16px] border-[0.5px] border-solid border-[rgba(128,128,128,1)]" data-node-id="827:2493" data-name="header">
+          <div className="fixed z-50 backdrop-blur-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.6)_0%,rgba(255,255,255,0.3)_100%)] text-white content-stretch flex items-center justify-between left-[calc(24px+3.13%)] right-[calc(24px+3.13%)] top-[30px] overflow-clip px-[20px] py-[4px] rounded-[16px] border-[0.5px] border-solid border-[rgba(255,255,255,0.6)] shadow-[inset_0px_1px_0px_rgba(255,255,255,0.65),0px_8px_24px_rgba(0,0,0,0.12)]" data-node-id="827:2493" data-name="header">
             <div className="h-[16px] relative shrink-0 w-[107px]" data-name="logo">
               <img alt="CUSP" className="absolute block inset-0 max-w-none size-full text-black" src={logoCuspLight} />
             </div>
@@ -92,12 +92,12 @@ export default function LandingPage() {
           </div>
           <div className="absolute content-stretch flex flex-col gap-[12px] items-start left-[104px] top-1/2 -translate-y-1/2 w-[502px] max-w-[calc(100%-130px)]" data-node-id="859:12618">
             <div className="[word-break:break-word] font-aeonik font-normal leading-[0] not-italic relative shrink-0 text-[64px] text-black tracking-[-1.28px] whitespace-pre-wrap" data-node-id="859:12619">
-              <p className="leading-[64px] mb-0">{`Invest smarter. `}</p>
-              <p className="leading-[64px]">Grow further.</p>
+              <p className="leading-[64px] mb-0">{`Invest with clarity. `}</p>
+              <p className="leading-[64px]">Grow with purpose.</p>
             </div>
             <div className="content-stretch flex flex-col gap-[31px] items-start relative shrink-0 w-[431px] max-w-full" data-node-id="859:12620">
-              <p className="[word-break:break-word] font-inter font-normal leading-[24px] not-italic relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-[363px] max-w-full" data-node-id="859:12621">{`Trade stocks and ETFs, build personalized portfolio strategies, and get guidance from AI `}</p>
-              <Button>Start now</Button>
+              <p className="[word-break:break-word] font-inter font-normal leading-[24px] not-italic relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-[363px] max-w-full" data-node-id="859:12621">{`Everything in one app \u2013 10,000+ global markets, $0 trading fees, halal investing, and portfolios built around your life.`}</p>
+              <Button>Start with $25</Button>
             </div>
           </div>
           <div className="absolute content-stretch flex gap-[36px] items-center justify-start left-[104px] bottom-[56px] max-w-[calc(100%-130px)]" data-node-id="859:14056">
@@ -126,8 +126,8 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17521">
                 Regulated by the DFSA
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17522">
-                CUSP is registered in DIFC and regulated by the Dubai Financial Services Authority. All funds are insured
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17522">
+                Cusp Wealth Ltd. is regulated by the DFSA with an Islamic endorsement. License #10863, ref.# F011420.
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17528">
                 Insured by SIPC
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17529">
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17529">
                 All investments are protected up to $500,000 by the Securities Investor Protection Corporation (SIPC).
               </p>
             </div>
@@ -160,8 +160,8 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17535">
                 Fatwa-certified
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17536">
-                CUSP Wealth is the UAE&apos;s first AI-powered investment platform to get an official Shariah certification
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17536">
+                The first AI-powered investment platform in the UAE to hold a Fatwa certification from Amanie Advisors.
               </p>
             </div>
           </div>
@@ -177,8 +177,8 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17542">
                 Withdraw anytime
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17543">
-                Certified Shariah-compliant by Amanie Advisors. Invest with confidence
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17543">
+                Top up your account instantly via multiple methods. Withdraw your funds whenever you need to, with no hassle.
               </p>
             </div>
           </div>

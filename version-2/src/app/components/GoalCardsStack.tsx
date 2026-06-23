@@ -1,7 +1,7 @@
 import Button from "./Button";
 import imgHalalCouple from "../../assets/sections/goal/halal-couple.png";
 import imgMoonStar from "../../assets/sections/goal/moon-star.svg";
-import imgLegacyMan from "../../assets/sections/goal/legacy-man.png";
+import imgLegacyCoins from "../../assets/sections/goal/legacy-coins.png";
 import imgRetireMan from "../../assets/sections/goal/retire-man.png";
 import imgRetireMask from "../../assets/sections/goal/retire-mask.svg";
 
@@ -68,23 +68,25 @@ export default function GoalCardsStack() {
           data-node-id="982:24239"
         >
           <div
-            className="bg-[#9d8464] content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
+            className="bg-[#f2d2a9] content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
             data-node-id="982:24293"
           >
-            <div className="absolute h-[422px] left-[-244px] top-[-35px] w-[753px] pointer-events-none" data-node-id="1013:26438">
-              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyMan} loading="lazy" decoding="async" />
+            <div className="absolute blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
             </div>
             <div
-              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-white w-[200px] z-[1]"
+              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-[#271810] w-[200px] z-[1]"
               data-node-id="982:24294"
             >
               <p className="font-aeonik font-normal leading-[32.765px] relative shrink-0 text-[26px] w-[194px]" data-node-id="982:24295">
                 Build cross-border legacy
               </p>
               <div className="font-inter font-normal leading-[20px] relative shrink-0 text-[14px] tracking-[-0.14px] whitespace-pre-wrap" data-node-id="982:24296">
-                <p className="mb-0">{`Build a portfolio that works while you don't. `}</p>
-                <p>Start now, step back sooner.</p>
+                <p>Life as an expat is a journey. Build wealth that keeps up &ndash; wherever you live, invest, support your loved ones, or move next.</p>
               </div>
+            </div>
+            <div className="absolute left-[-149px] mix-blend-hard-light size-[331px] top-[-8px] pointer-events-none z-[2]" data-node-id="1013:26449">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
             </div>
           </div>
 

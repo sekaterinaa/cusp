@@ -14,9 +14,9 @@ type Slide = {
 // Add more slides here — the counter, progress bar and scroll length adapt automatically.
 const slides: Slide[] = [
   {
-    title: "The world's markets, from right here.",
+    title: "The world's markets, from right here",
     description:
-      "Manage your portfolio yourself, delegate it to CUSP\u2019s experts, or use our robo-advisory services.",
+      "Manage your portfolio yourself, lean on our expert advisors, or let our AI-powered portfolio tools guide you.",
     image: imgSlide1,
   },
   {

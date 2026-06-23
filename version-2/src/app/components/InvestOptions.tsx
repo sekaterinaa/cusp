@@ -12,23 +12,23 @@ type Option = {
 
 const options: Option[] = [
   {
-    title: "Company stocks",
+    title: "Stocks",
     description:
-      "Own a piece of the world's biggest companies. Buy and sell shares with zero commission, starting from just $1.",
+      "Access 10,000+ US-listed stocks \u2013 from global giants to emerging names \u2013 with $0 trading fees.",
     image: investStocks,
     imageClassName: "h-[56px] w-auto",
   },
   {
-    title: "Gold",
+    title: "Halal assets",
     description:
-      "Add stability to your portfolio with gold — the ultimate safe haven asset, without the vault.",
+      "Discover over 1,300 Shariah-compliant assets, so your investments stay true to your faith.",
     image: investGold,
     imageClassName: "size-[127px]",
   },
   {
     title: "ETFs",
     description:
-      "Broad market exposure, low risk, zero fees. The smarter way to grow wealth steadily over time.",
+      "Diversify across markets with a single investment \u2013 ETFs give you broad exposure.",
     image: investEtfs,
     imageClassName: "h-[56px] w-auto",
   },

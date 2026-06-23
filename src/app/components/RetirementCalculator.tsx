@@ -22,7 +22,7 @@ export default function RetirementCalculator() {
                 <p className="font-aeonik font-normal leading-[43px] relative shrink-0 text-[#1d1611] text-[48px] tracking-[-0.72px] w-full" data-node-id="928:19287">
                   See what&rsquo;s possible
                 </p>
-                <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-full" data-node-id="928:19288">{`Build passive income by seeing what you can earn with CUSP Wealth's Personalised Portfolios, starting from $25 `}</p>
+                <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-full" data-node-id="928:19288">{`Explore how your investment could look over time \u2013 with lower fees and a $25 starting deposit.`}</p>
               </div>
               <div className="content-stretch flex flex-col gap-[15.328px] items-start relative shrink-0 w-full" data-node-id="928:19289">
                 <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="928:19290">
@@ -96,19 +96,19 @@ export default function RetirementCalculator() {
               data-node-id="928:19318"
             >
               <div className="[word-break:break-word] content-stretch flex gap-[15.328px] items-center leading-[0] relative shrink-0 w-full whitespace-nowrap" data-node-id="928:19320">
-                <div className="content-stretch flex flex-col gap-[8px] items-start justify-center relative shrink-0" data-node-id="928:19321">
+                <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-node-id="928:19321">
                   <div className="flex flex-col font-aeonik font-medium justify-center relative shrink-0 text-[27px] text-black tracking-[-0.108px]" data-node-id="928:19322">
                     <p className="leading-[21.076px]">$250,000.00</p>
                   </div>
-                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[10px] text-ellipsis tracking-[-0.05px]" data-node-id="928:19323">
-                    <p className="leading-[9.58px] overflow-hidden text-ellipsis text-[12px]">projected value in 20 years</p>
+                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[6.706px] text-ellipsis tracking-[-0.0335px]" data-node-id="928:19323">
+                    <p className="leading-[9.58px] overflow-hidden text-ellipsis">projected value in 20 years</p>
                   </div>
                 </div>
-                <div className="content-stretch flex flex-col gap-[8px] items-start justify-center opacity-50 relative shrink-0" data-node-id="928:19324">
+                <div className="content-stretch flex flex-col gap-[4px] items-start justify-center opacity-50 relative shrink-0" data-node-id="928:19324">
                   <div className="flex flex-col font-aeonik font-medium justify-center opacity-[0.67] relative shrink-0 text-[27px] text-black tracking-[-0.108px]" data-node-id="928:19325">
                     <p className="leading-[21.076px]">$10,000</p>
                   </div>
-                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[10px] text-ellipsis tracking-[-0.05px]" data-node-id="928:19326">
+                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[6.706px] text-ellipsis tracking-[-0.0335px]" data-node-id="928:19326">
                     <p className="leading-[9.58px] overflow-hidden text-ellipsis">saved on comission</p>
                   </div>
                 </div>

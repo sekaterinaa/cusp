@@ -5,12 +5,10 @@ import imgEmailIcon from "../../assets/sections/cta-email-icon.svg";
 
 export default function FinalCTA() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start pt-[64px] pb-[200px] relative shrink-0 w-full" data-node-id="959:22385">
+    <div className="content-stretch flex flex-col gap-[40px] items-start pt-[64px] pb-[124px] relative shrink-0 w-full" data-node-id="959:22385">
       <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="959:22411">
         <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[#1d1611] text-[48px] text-center tracking-[-0.96px] w-full whitespace-pre-wrap" data-node-id="959:22386">
-          {`Ready to make `}
-          <br aria-hidden />
-          your money work?
+          Let&rsquo;s build something that lasts
         </p>
       </div>
       <div className="content-stretch flex gap-[12px] items-start justify-center px-[200px] relative shrink-0 w-full" data-node-id="959:22421">

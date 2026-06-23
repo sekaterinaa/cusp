@@ -3,7 +3,7 @@ import imgZawya from "../../assets/sections/press-zawya.webp";
 
 export default function PressMilestones() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start py-[90px] relative shrink-0 w-full" data-node-id="854:7144">
+    <div className="content-stretch flex flex-col gap-[40px] items-start py-[64px] relative shrink-0 w-full" data-node-id="854:7144">
       <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[#1d1611] text-[48px] text-center tracking-[-0.96px] w-full" data-node-id="854:7145">
         Follow our key milestones
       </p>

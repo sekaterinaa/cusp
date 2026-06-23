@@ -1,36 +1,28 @@
-import GoalCardsStack from "../app/components/GoalCardsStack";
 import Button from "../app/components/Button";
+import GoalCardsStack from "../app/components/GoalCardsStack";
+import InvestWays from "../app/components/InvestWays";
+import InvestOptions from "../app/components/InvestOptions";
 import RetirementCalculator from "../app/components/RetirementCalculator";
 import PressMilestones from "../app/components/PressMilestones";
 import PricingComparison from "../app/components/PricingComparison";
 import FinalCTA from "../app/components/FinalCTA";
-import DownloadCUSP from "../app/components/DownloadCUSP";
 import FAQ from "../app/components/FAQ";
 import Footer from "../app/components/Footer";
+import RatingsBar from "../app/components/RatingsBar";
 import GetAppWidget from "../app/components/GetAppWidget";
+import DownloadCUSP from "../app/components/DownloadCUSP";
+import videoHeroPhone from "../assets/hero-phone-white.mov";
+import imgHeroBgBlur from "../assets/hero-bg-blur.png";
+import videoHeroDesert from "../assets/hero-desert-bg-upscaled.mp4";
 import logoCuspLight from "../assets/sections/black-main-logo-without-trademark.svg";
-import imgTrustIconShield from "../assets/sections/trust-icon-shield.svg";
-import imgTrustIconUmbrella from "../assets/sections/trust-icon-umbrella.svg";
-import imgTrustIconCheck from "../assets/sections/trust-icon-check.svg";
-import imgTrustIconWallet from "../assets/sections/trust-icon-wallet.svg";
-import heroPeople from "../assets/sections/hero-people.png";
-import heroBgBlur from "../assets/sections/hero2-bg-blur.png";
-import heroChartArea from "../assets/sections/hero2-chart-area.svg";
-import heroChartLine from "../assets/sections/hero2-chart-line.svg";
-import heroDotOuter from "../assets/sections/hero2-dot-outer.svg";
-import heroDotInner from "../assets/sections/hero2-dot-inner.svg";
-import heroArrowUp from "../assets/sections/hero2-arrow-up.svg";
 import pressGulfBusiness from "../assets/sections/press-gulfbusiness.svg";
 import pressZawya from "../assets/sections/press-zawya.svg";
 import pressYahoo from "../assets/sections/press-yahoo.svg";
 import pressAlpaca from "../assets/sections/press-alpaca.svg";
-import imgInvestStocks from "../assets/sections/invest-stocks.png";
-import imgInvestGold from "../assets/sections/invest-gold.png";
-import imgInvestEtfs from "../assets/sections/invest-etfs.png";
-import imgCardMarkets from "../assets/card-markets.webp";
-import imgCardAi from "../assets/card-ai.webp";
-import imgCardGoal from "../assets/card-goal.webp";
-import imgCardShariah from "../assets/card-shariah.webp";
+import imgTrustIconShield from "../assets/sections/trust-icon-shield.svg";
+import imgTrustIconUmbrella from "../assets/sections/trust-icon-umbrella.svg";
+import imgTrustIconCheck from "../assets/sections/trust-icon-check.svg";
+import imgTrustIconWallet from "../assets/sections/trust-icon-wallet.svg";
 
 const imgYouImage1 = "https://www.figma.com/api/mcp/asset/85f9fee4-728e-4282-9bf3-afbfb56ac642";
 const imgImage583325 = "https://www.figma.com/api/mcp/asset/6f7f1b6f-a28b-4644-addf-6d4ce628e035";
@@ -48,160 +40,75 @@ const imgGroup2085662947 = "https://www.figma.com/api/mcp/asset/c8799416-ac3d-43
 export default function LandingPage() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[24px] relative size-full" data-node-id="842:5539">
-      <div className="flex w-full flex-col items-center" data-name="hero-screen">
-      <div className="fixed z-50 backdrop-blur-[10px] bg-[rgba(255,255,255,0.32)] text-white content-stretch flex items-center justify-between left-[calc(24px+3.13%)] right-[calc(24px+3.13%)] top-[10px] overflow-clip px-[20px] py-[4px] rounded-[16px] border-[0.5px] border-solid border-[rgba(128,128,128,1)]" data-node-id="827:2493" data-name="header">
-        <div className="h-[16px] relative shrink-0 w-[107px]" data-name="logo">
-          <img alt="CUSP" className="absolute block inset-0 max-w-none size-full text-black" src={logoCuspLight} />
-        </div>
-        <div className="content-stretch flex gap-[24px] items-center relative shrink-0">
-          <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
-            <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Personalised portfolios</p>
+      <div className="flex w-full flex-col items-center px-[24px]" data-name="hero-screen">
+        <div className="relative w-full h-[80vh] overflow-clip rounded-[32px] bg-[#1a110a]" data-node-id="859:12535" data-name="hero">
+          <div className="absolute left-0 top-[-42px] h-[699px] w-[1280px] max-w-none" data-node-id="859:12536" style={{ backgroundImage: "linear-gradient(182.67deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)" }} />
+          <div className="absolute -inset-[64px] blur-[48px]" data-node-id="859:12804">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHeroBgBlur} />
           </div>
-          <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
-            <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Pricing</p>
+          <div className="absolute inset-0 overflow-clip" data-node-id="898:16167" data-name="hero-desert-bg">
+            <video className="absolute inset-0 max-w-none object-cover object-center pointer-events-none size-full" src={videoHeroDesert} autoPlay muted loop playsInline />
           </div>
-          <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
-            <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Help center</p>
-          </div>
-          <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
-            <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">About us</p>
-          </div>
-        </div>
-        <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="contentRight">
-          <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex items-center overflow-clip px-[12px] py-[10px] relative rounded-[24px] shrink-0" data-name="searchContainer">
-            <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <circle cx="9" cy="9" r="6.25" stroke="black" strokeWidth="1.25" />
-              <path d="m13.6 13.6 2.9 2.9" stroke="black" strokeWidth="1.25" strokeLinecap="round" />
-            </svg>
-          </div>
-          <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
-            <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Eng</p>
-            <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <path d="m6.5 8.5 3.5 3.5 3.5-3.5" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex flex-col gap-[4px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
-            <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
-            <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
-            <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
-          </div>
-        </div>
-      </div>
-      <div className="content-stretch flex flex-col items-start px-[24px] relative w-full" data-node-id="842:5567">
-        <div className="bg-[#1a110a] h-[80vh] mt-[60px] overflow-clip relative rounded-[32px] w-full" data-node-id="842:5568" data-name="MacBook Air - 27">
-          <div className="absolute h-[699px] left-0 top-[-42px] w-[1280px] pointer-events-none" data-node-id="987:25534" style={{ backgroundImage: "linear-gradient(182.67250820454893deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)" }} />
-          <div className="absolute bg-gradient-to-b from-[#1a110a] h-[629px] left-0 right-0 rounded-[10.42px] to-[#d2ad8d] top-0 pointer-events-none" data-node-id="987:25535" />
-          <div className="absolute flex h-[1952px] items-center justify-center left-[-1553px] top-[-792px] w-[4078px] pointer-events-none">
-            <div className="-scale-y-100 flex-none rotate-180">
-              <div className="blur-[150px] h-[1952px] relative w-[4078px]" data-node-id="987:25536" data-name="image 583176">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={heroBgBlur} />
+          <div className="fixed z-50 backdrop-blur-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.6)_0%,rgba(255,255,255,0.3)_100%)] text-white content-stretch flex items-center justify-between left-[calc(24px+3.13%)] right-[calc(24px+3.13%)] top-[30px] overflow-clip px-[20px] py-[4px] rounded-[16px] border-[0.5px] border-solid border-[rgba(255,255,255,0.6)] shadow-[inset_0px_1px_0px_rgba(255,255,255,0.65),0px_8px_24px_rgba(0,0,0,0.12)]" data-node-id="827:2493" data-name="header">
+            <div className="h-[16px] relative shrink-0 w-[107px]" data-name="logo">
+              <img alt="CUSP" className="absolute block inset-0 max-w-none size-full text-black" src={logoCuspLight} />
+            </div>
+            <div className="content-stretch flex gap-[24px] items-center relative shrink-0">
+              <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
+                <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Personalised portfolios</p>
+              </div>
+              <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
+                <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Pricing</p>
+              </div>
+              <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
+                <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Help center</p>
+              </div>
+              <div className="content-stretch flex items-center justify-center p-[12px] relative shrink-0">
+                <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">About us</p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="contentRight">
+              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex items-center overflow-clip px-[12px] py-[10px] relative rounded-[24px] shrink-0" data-name="searchContainer">
+                <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <circle cx="9" cy="9" r="6.25" stroke="black" strokeWidth="1.25" />
+                  <path d="m13.6 13.6 2.9 2.9" stroke="black" strokeWidth="1.25" strokeLinecap="round" />
+                </svg>
+              </div>
+              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
+                <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Eng</p>
+                <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <path d="m6.5 8.5 3.5 3.5 3.5-3.5" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex flex-col gap-[4px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
+                <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
+                <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
+                <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
               </div>
             </div>
           </div>
-          <div className="absolute inset-0 pointer-events-none" data-node-id="989:25687" data-name="magnific_rlv19fpxtc 2">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={heroPeople} />
+          <div className="-translate-x-1/2 absolute h-[733px] left-[calc(50%+364.67px)] overflow-clip bottom-0 w-[503.348px] max-w-none" data-node-id="859:14036">
+            <video className="absolute inset-0 max-w-none object-contain object-bottom pointer-events-none size-full scale-[1.4] origin-bottom" src={videoHeroPhone} autoPlay muted playsInline />
           </div>
-          <div className="absolute bg-[#825435] blur-[19px] h-[53px] left-[532px] rounded-[44px] top-[250px] w-[185px] pointer-events-none" data-node-id="987:25538" />
-          <div className="-translate-x-1/2 absolute backdrop-blur-[20px] bg-[rgba(255,255,255,0.11)] border-2 border-[rgba(255,255,255,0.3)] border-solid h-[237px] left-1/2 overflow-clip rounded-[24.103px] top-[49px] w-[270px]" data-node-id="987:25550" data-name="chart-card">
-            <div className="absolute bottom-[-5px] flex h-[291px] items-center justify-center left-[-2px] w-[269px] pointer-events-none">
-              <div className="-scale-y-100 flex-none rotate-180">
-                <div className="h-[291px] overflow-clip relative w-[269px]" data-name="overviewChart">
-                  <div className="absolute flex h-[276px] items-center justify-center left-[-63.97px] right-[-344.03px] top-[117.76px]" style={{ containerType: "size" }}>
-                    <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
-                      <div className="relative size-full" data-name="Area">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={heroChartArea} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute flex h-[192px] items-center justify-center left-[-63.97px] right-[-344.03px] top-[117.76px]" style={{ containerType: "size" }}>
-                    <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
-                      <div className="relative size-full" data-name="Line">
-                        <div className="absolute inset-[-0.5%_-0.14%]">
-                          <img alt="" className="block max-w-none size-full" src={heroChartLine} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute flex items-center justify-center left-0 size-[15px] top-[130px]">
-                    <div className="-scale-y-100 flex-none rotate-180">
-                      <div className="relative size-[15px]">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={heroDotOuter} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute flex items-center justify-center left-[4px] size-[7px] top-[134px]">
-                    <div className="-scale-y-100 flex-none rotate-180">
-                      <div className="relative size-[7px]">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={heroDotInner} />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="absolute content-stretch flex flex-col gap-[12px] items-start left-[104px] top-1/2 -translate-y-1/2 w-[502px] max-w-[calc(100%-130px)]" data-node-id="859:12618">
+            <div className="[word-break:break-word] font-aeonik font-normal leading-[0] not-italic relative shrink-0 text-[64px] text-black tracking-[-1.28px] whitespace-pre-wrap" data-node-id="859:12619">
+              <p className="leading-[64px] mb-0">{`Invest with clarity. `}</p>
+              <p className="leading-[64px]">Grow with purpose.</p>
             </div>
-            <div className="-translate-x-1/2 absolute bottom-[9.52px] content-stretch flex items-center left-[calc(50%-0.23px)] px-[5.03px]" data-name="chips_timeframe">
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">1D</p>
-              </div>
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">1W</p>
-              </div>
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">1M</p>
-              </div>
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">6M</p>
-              </div>
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-white tracking-[0.0112px] whitespace-nowrap">YTD</p>
-              </div>
-              <div className="content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">1Y</p>
-              </div>
-              <div className="bg-[rgba(230,242,211,0.2)] content-stretch flex h-[25.518px] items-center justify-center px-[9.569px] py-[4.785px] relative rounded-[12.759px] shrink-0">
-                <p className="font-aeonik font-semibold leading-[15.949px] not-italic relative shrink-0 text-[11.16px] text-center text-white tracking-[0.0112px] whitespace-nowrap">ALL</p>
-              </div>
-            </div>
-            <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-0 items-center left-[calc(50%+0.15px)] px-[14.92px] top-[27.21px] w-[335.693px]" data-node-id="987:25568">
-              <div className="[word-break:break-word] flex flex-col font-aeonik font-semibold justify-center leading-[0] min-w-full not-italic overflow-hidden relative shrink-0 text-[24px] text-black text-center text-ellipsis tracking-[-0.096px] w-[min-content] whitespace-nowrap">
-                <p className="leading-[41.029px] overflow-hidden text-ellipsis">$149,618.52</p>
-              </div>
-              <div className="content-stretch flex gap-[5.595px] items-center relative shrink-0" data-name="trend-value">
-                <div className="content-stretch flex gap-[3.73px] items-center relative shrink-0">
-                  <div className="relative shrink-0 size-[11.19px]">
-                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={heroArrowUp} />
-                  </div>
-                  <div className="[word-break:break-word] flex flex-col font-aeonik font-normal justify-center leading-[0] not-italic opacity-60 overflow-hidden relative shrink-0 text-[14.92px] text-black text-ellipsis whitespace-nowrap">
-                    <p className="leading-[22.38px] overflow-hidden text-ellipsis">124.85%</p>
-                  </div>
-                </div>
-                <div className="[word-break:break-word] flex flex-col font-aeonik font-normal justify-center leading-[0] not-italic opacity-60 overflow-hidden relative shrink-0 text-[14.92px] text-black text-ellipsis whitespace-nowrap">
-                  <p className="leading-[22.38px] overflow-hidden text-ellipsis">All time</p>
-                </div>
-              </div>
+            <div className="content-stretch flex flex-col gap-[31px] items-start relative shrink-0 w-[431px] max-w-full" data-node-id="859:12620">
+              <p className="[word-break:break-word] font-inter font-normal leading-[24px] not-italic relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-[363px] max-w-full" data-node-id="859:12621">{`Everything in one app \u2013 10,000+ global markets, $0 trading fees, halal investing, and portfolios built around your life.`}</p>
+              <Button>Start with $25</Button>
             </div>
           </div>
-          <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[12px] items-center justify-center left-1/2 top-[310px] w-[502px]" data-node-id="842:5574">
-            <div className="[word-break:break-word] font-aeonik font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[48px] text-center text-white tracking-[-0.96px] w-[min-content] whitespace-pre-wrap" data-node-id="842:5575">
-              <p className="leading-[56px] mb-0">{`Invest smarter. `}</p>
-              <p className="leading-[56px]">Grow further.</p>
-            </div>
-            <div className="content-stretch flex flex-col gap-[31px] items-center relative shrink-0 w-[431px]" data-node-id="842:5576">
-              <p className="[word-break:break-word] font-inter font-normal leading-[24px] not-italic relative shrink-0 text-[16px] text-center text-white tracking-[-0.16px] w-[363px]" data-node-id="842:5577">{`Trade stocks and ETFs, build personalized portfolio strategies, and get guidance from AI `}</p>
-              <div className="content-stretch flex flex-col items-center relative shrink-0" data-node-id="842:5578">
-                <Button>Start now</Button>
-              </div>
-            </div>
-          </div>
-          <div className="-translate-x-1/2 absolute content-stretch flex flex-wrap gap-[36px] items-center justify-center bottom-[40px] left-1/2 max-w-[calc(100%-130px)]" data-node-id="859:14056">
+          <div className="absolute content-stretch flex gap-[36px] items-center justify-start left-[104px] bottom-[56px] max-w-[calc(100%-130px)]" data-node-id="859:14056">
             <img alt="Gulf Business" className="block h-[14px] w-[111px] shrink-0 object-contain" src={pressGulfBusiness} />
             <img alt="Zawya" className="block h-[62px] w-[155px] shrink-0 object-contain" src={pressZawya} />
             <img alt="Yahoo" className="block h-[27px] w-[99px] shrink-0 object-contain" src={pressYahoo} />
             <img alt="Alpaca" className="block h-[44px] w-[152px] shrink-0 object-contain" src={pressAlpaca} />
           </div>
         </div>
-        </div>
       </div>
+      <RatingsBar />
       <div className="content-stretch flex flex-col gap-[32px] items-center justify-center px-[100px] py-[48px] relative shrink-0 w-full" data-node-id="842:5608">
         <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[48px] text-black text-center tracking-[-0.96px] whitespace-nowrap" data-node-id="913:17146">
           Why trust us?
@@ -219,8 +126,8 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17521">
                 Regulated by the DFSA
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17522">
-                CUSP is registered in DIFC and regulated by the Dubai Financial Services Authority. All funds are insured
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17522">
+                Cusp Wealth Ltd. is regulated by the DFSA with an Islamic endorsement. License #10863, ref.# F011420.
               </p>
             </div>
           </div>
@@ -236,7 +143,7 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17528">
                 Insured by SIPC
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17529">
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17529">
                 All investments are protected up to $500,000 by the Securities Investor Protection Corporation (SIPC).
               </p>
             </div>
@@ -253,8 +160,8 @@ export default function LandingPage() {
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17535">
                 Fatwa-certified
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17536">
-                CUSP Wealth is the UAE&apos;s first AI-powered investment platform to get an official Shariah certification
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17536">
+                The first AI-powered investment platform in the UAE to hold a Fatwa certification from Amanie Advisors.
               </p>
             </div>
           </div>
@@ -268,10 +175,10 @@ export default function LandingPage() {
             </div>
             <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start not-italic relative shrink-0 text-black text-center w-full" data-node-id="913:17541">
               <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="913:17542">
-                Withdraw and deposit anytime
+                Withdraw anytime
               </p>
-              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="913:17543">
-                Certified Shariah-compliant by Amanie Advisors. Invest with confidence
+              <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[14px] tracking-[-0.13px] w-full" data-node-id="913:17543">
+                Top up your account instantly via multiple methods. Withdraw your funds whenever you need to, with no hassle.
               </p>
             </div>
           </div>
@@ -280,122 +187,11 @@ export default function LandingPage() {
       <div className="content-stretch flex w-full flex-col items-stretch pt-[44px] px-[24px] relative shrink-0">
         <GoalCardsStack />
       </div>
-      <div className="content-stretch flex flex-col gap-[32px] items-center justify-center px-[100px] py-[48px] relative shrink-0 w-full" data-node-id="987:25198">
-        <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[48px] text-black text-center tracking-[-0.96px] w-[434px] whitespace-pre-wrap" data-node-id="987:25199">
-          {`What can I `}
-          <br aria-hidden />
-          invest into?
-        </p>
-        <div className="content-stretch flex flex-col items-start px-[100px] relative shrink-0 w-full" data-node-id="987:25200">
-          <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full md:flex-row md:items-stretch" data-node-id="987:25201">
-            <div className="bg-[#fafafa] border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch" data-node-id="989:25737">
-              <div className="h-[127px] relative shrink-0 w-[198px]">
-                <img alt="Apple, Tesla, Nvidia" className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-[56px] w-auto object-contain" src={imgInvestStocks} />
-              </div>
-              <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start not-italic relative shrink-0 text-black text-center w-full" data-node-id="989:25739">
-                <p className="font-aeonik leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="989:25740">
-                  Company stocks
-                </p>
-                <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="989:25741">
-                  Keep more of what you earn. No trading fees, no hidden charges — just your money, growing.
-                </p>
-              </div>
-            </div>
-            <div className="bg-[#fafafa] border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch" data-node-id="989:25748">
-              <div className="relative shrink-0 size-[127px]" data-node-id="989:25749">
-                <img alt="Gold bars" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgInvestGold} />
-              </div>
-              <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start not-italic relative shrink-0 text-black text-center w-full" data-node-id="989:25750">
-                <p className="font-aeonik leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="989:25751">
-                  Gold
-                </p>
-                <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="989:25752">
-                  Keep more of what you earn. No trading fees, no hidden charges — just your money, growing.
-                </p>
-              </div>
-            </div>
-            <div className="bg-[#fafafa] border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch" data-node-id="989:25743">
-              <div className="h-[127px] relative shrink-0 w-[198px]">
-                <img alt="iShares, Vanguard, SPY" className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-[56px] w-auto object-contain" src={imgInvestEtfs} />
-              </div>
-              <div className="[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start not-italic relative shrink-0 text-black text-center w-full" data-node-id="989:25745">
-                <p className="font-aeonik leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full" data-node-id="989:25746">
-                  ETFs
-                </p>
-                <p className="font-inter font-normal leading-[20px] opacity-50 relative shrink-0 text-[13px] tracking-[-0.13px] w-full" data-node-id="989:25747">
-                  Keep more of what you earn. No trading fees, no hidden charges — just your money, growing.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="content-stretch flex items-center px-[24px] relative shrink-0 w-full" data-node-id="842:5667">
-        <div className="bg-[#1d1611] content-stretch flex flex-[1_0_0] flex-col gap-[64px] items-center min-w-px overflow-clip px-[119px] py-[90px] relative rounded-[32px]" data-node-id="842:5668">
-          <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-center not-italic relative shrink-0 text-center text-white w-[502px]" data-node-id="842:5669">
-            <p className="font-aeonik font-normal leading-[56px] relative shrink-0 text-[48px] tracking-[-0.96px] whitespace-nowrap" data-node-id="842:5670">
-              Invest the way you prefer
-            </p>
-            <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] tracking-[-0.16px] w-[431px]" data-node-id="842:5671">
-              Manage your portfolio yourself, delegate it to CUSP’s experts, or use our robo-advisory services.
-            </p>
-          </div>
-          <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-[1042px]" data-node-id="842:5672">
-            <div className="content-stretch flex gap-[12px] h-[577px] items-center relative shrink-0 w-full" data-node-id="842:5673">
-              <div className="border-[0.5px] border-[rgba(255,255,255,0.16)] border-solid content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip p-[48px] relative rounded-[64px] shadow-[0px_4px_79px_0px_rgba(0,0,0,0.25)]" data-node-id="854:9193">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[64px] size-full" src={imgCardMarkets} loading="lazy" decoding="async" />
-                <div className="[word-break:break-word] content-stretch flex flex-col font-aeonik font-normal gap-[8px] items-center not-italic relative shrink-0 text-center w-full" data-node-id="854:9462">
-                  <p className="leading-[29.333px] min-w-full relative shrink-0 text-[#fbedde] text-[28px] w-[min-content] whitespace-pre-wrap" data-node-id="854:9463">
-                    {`The world's markets, `}
-                    <br aria-hidden />
-                    from right here
-                  </p>
-                  <p className="leading-[21.333px] relative shrink-0 text-[16px] text-[rgba(251,237,222,0.6)] w-[292px]" data-node-id="854:9464">
-                    Remove conflict between financial decisions and personal moral values with our shariah investment tools
-                  </p>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip p-[48px] relative rounded-[64px]" data-node-id="854:9211">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[64px] size-full" src={imgCardAi} loading="lazy" decoding="async" />
-                <div className="[word-break:break-word] content-stretch flex flex-col font-aeonik font-normal gap-[8px] items-center not-italic relative shrink-0 text-center w-full" data-node-id="854:9466">
-                  <div className="leading-[0] min-w-full relative shrink-0 text-[#fbedde] text-[28px] w-[min-content] whitespace-pre-wrap" data-node-id="854:9467">
-                    <p className="leading-[29.333px] mb-0">{`AI insights to make `}</p>
-                    <p className="leading-[29.333px]">your portfolio stronger</p>
-                  </div>
-                  <p className="leading-[21.333px] relative shrink-0 text-[16px] text-[rgba(251,237,222,0.6)] w-[292px]" data-node-id="854:9468">{`A 0–10 portfolio score and four pillar insights tell you what's working, what isn't, and what to do about it — no jargon required`}</p>
-                </div>
-              </div>
-            </div>
-            <div className="content-stretch flex gap-[12px] h-[577px] items-center relative shrink-0 w-full" data-node-id="842:5733">
-              <div className="border-[0.5px] border-[rgba(255,255,255,0.16)] border-solid content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip p-[48px] relative rounded-[64px] shadow-[0px_4px_79px_0px_rgba(0,0,0,0.25)]" data-node-id="854:9247">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[64px] size-full" src={imgCardGoal} loading="lazy" decoding="async" />
-                <div className="[word-break:break-word] content-stretch flex flex-col font-aeonik font-normal gap-[8px] items-center not-italic relative shrink-0 text-center w-full" data-node-id="854:9470">
-                  <div className="leading-[0] min-w-full relative shrink-0 text-[#fbedde] text-[28px] w-[min-content] whitespace-pre-wrap" data-node-id="854:9471">
-                    <p className="leading-[29.333px] mb-0">{`A portfolio built `}</p>
-                    <p className="leading-[29.333px]">around your goal</p>
-                  </div>
-                  <p className="leading-[21.333px] relative shrink-0 text-[16px] text-[rgba(251,237,222,0.6)] w-[292px]" data-node-id="854:9472">
-                    Remove conflict between financial decisions and personal moral values with our shariah investment tools
-                  </p>
-                </div>
-              </div>
-              <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start min-w-px overflow-clip p-[48px] relative rounded-[64px]" data-node-id="854:9342">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[64px] size-full" src={imgCardShariah} loading="lazy" decoding="async" />
-                <div className="[word-break:break-word] content-stretch flex flex-col font-aeonik font-normal gap-[8px] items-center not-italic relative shrink-0 text-center w-full" data-node-id="854:9474">
-                  <p className="leading-[29.333px] min-w-full relative shrink-0 text-[#fbedde] text-[28px] w-[min-content]" data-node-id="854:9475">
-                    Shariah screening
-                  </p>
-                  <p className="leading-[21.333px] relative shrink-0 text-[16px] text-[rgba(251,237,222,0.6)] w-[292px]" data-node-id="854:9476">
-                    Curated Shariah-compliant stocks and ETFs, screened to trusted standards — so your portfolio can grow without compromise
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <InvestWays />
+      <InvestOptions />
+      <RetirementCalculator />
       <div className="content-stretch flex items-center px-[24px] relative shrink-0 w-full" data-node-id="842:5837">
-        <div className="bg-[#fdf6eb] content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip px-[119px] py-[80px] relative rounded-[32px]" data-node-id="842:5838">
+        <div className="content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip px-[24px] py-[64px] relative rounded-[32px]" data-node-id="842:5838" style={{ backgroundColor: "rgb(253, 246, 235)", backgroundImage: "linear-gradient(108.19141153114029deg, rgb(255, 240, 226) 30.82%, rgb(255, 247, 237) 122.93%, rgb(221, 116, 15) 148.31%), url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1232 694.95' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(0.0000057125 -123.58 109.67 0.000025204 615.79 1235.8)'><stop stop-color='rgba(251,248,244,1)' offset='0'/><stop stop-color='rgba(195,190,186,1)' offset='0.25'/><stop stop-color='rgba(167,161,156,1)' offset='0.375'/><stop stop-color='rgba(139,133,127,1)' offset='0.5'/><stop stop-color='rgba(110,104,98,1)' offset='0.625'/><stop stop-color='rgba(82,75,69,1)' offset='0.75'/><stop stop-color='rgba(54,46,39,1)' offset='0.875'/><stop stop-color='rgba(40,31,25,1)' offset='0.9375'/><stop stop-color='rgba(26,17,10,1)' offset='1'/></radialGradient></defs></svg>\"), linear-gradient(90deg, rgb(252, 248, 239) 0%, rgb(252, 248, 239) 100%)" }}>
           <div className="content-stretch flex flex-col items-center relative shrink-0 w-[502px]" data-node-id="842:5839">
             <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[#1d1611] text-[48px] text-center tracking-[-0.96px] w-[540px]" data-node-id="842:5840">
               We are on a mission to help people build wealth
@@ -452,7 +248,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <RetirementCalculator />
       <PressMilestones />
       <PricingComparison />
       <FinalCTA />

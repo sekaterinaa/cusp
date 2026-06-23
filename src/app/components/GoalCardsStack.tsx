@@ -1,206 +1,125 @@
-import { useEffect, useRef, useState } from "react";
-import GoalCard from "./GoalCard";
 import Button from "./Button";
-import "./GoalCardsStack.css";
-import goalHalal from "../../assets/sections/goal-halal.png";
-import goalCrossborder from "../../assets/sections/goal-crossborder.png";
-import goalRetire from "../../assets/sections/goal-retire.png";
-import goalIconMoon from "../../assets/sections/goal-icon-moon.svg";
-import goalIconGlobe from "../../assets/sections/goal-icon-globe.svg";
-import goalIconRocket from "../../assets/sections/goal-icon-rocket.svg";
-import goalBgGlow from "../../assets/sections/goal-bg-glow.svg";
+import imgHalalCouple from "../../assets/sections/goal/halal-couple.png";
+import imgMoonStar from "../../assets/sections/goal/moon-star.svg";
+import imgLegacyCoins from "../../assets/sections/goal/legacy-coins.png";
+import imgRetireMan from "../../assets/sections/goal/retire-man.png";
+import imgRetireMask from "../../assets/sections/goal/retire-mask.svg";
 
-const GOAL_GRADIENT =
-  "linear-gradient(174.42deg, rgb(26, 17, 10) 9.2971%, rgb(210, 173, 141) 130.78%)";
-
-const cards = [
-  {
-    title: "Invest the halal way",
-    description:
-      "Your beliefs and your investments belong together. Our Shariah-compliant tools are designed with exactly that in mind.",
-    background: GOAL_GRADIENT,
-    image: goalHalal,
-    icon: goalIconMoon,
-    imagePosition: { left: "0px", top: "-90.02px", width: "1036px", height: "581px" },
-  },
-  {
-    title: "Build a cross-border legacy",
-    description:
-      "Life as an expat is a journey. Build wealth that keeps up – wherever you live, invest, support your loved ones, or move next",
-    background: GOAL_GRADIENT,
-    image: goalCrossborder,
-    icon: goalIconGlobe,
-    imagePosition: { left: "-84px", top: "-39px", width: "1121px", height: "629px" },
-  },
-  {
-    title: "Retire earlier",
-    description:
-      "The world moves fast. Invest in a financial foundation that stays strong, from education to retirement.",
-    background: GOAL_GRADIENT,
-    image: goalRetire,
-    icon: goalIconRocket,
-    imagePosition: { left: "0px", top: "-58px", width: "922px", height: "517px" },
-  },
-] as const;
-
-const STACK_PEEK = 16;
-const STACK_SCALE_STEP = 0.05;
-const CARD_NATIVE_WIDTH = 922;
-const CARD_NATIVE_HEIGHT = 394;
-const CARD_WIDTH_RATIO = 0.7;
-const PIN_PER_CARD = 420;
+const ORANGE_GRADIENT =
+  "linear-gradient(182.84695752350353deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)";
 
 export default function GoalCardsStack() {
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const stackRef = useRef<HTMLUListElement>(null);
-  const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReducedMotion(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (reducedMotion) return;
-
-    const wrap = wrapRef.current;
-    const section = sectionRef.current;
-    if (!wrap || !section) return;
-
-    const total = cards.length;
-    let raf = 0;
-
-    const apply = () => {
-      raf = 0;
-
-      const stack = stackRef.current;
-
-      // Scale every card so its rendered width is a fixed ratio of the section
-      // width, preserving the card's native aspect ratio and internal layout.
-      const fitScale = (section.clientWidth * CARD_WIDTH_RATIO) / CARD_NATIVE_WIDTH;
-      const scaledCardHeight = CARD_NATIVE_HEIGHT * fitScale;
-
-      // Size the card box to the visible (scaled) height and scale from the top
-      // (see CSS), so the frame hugs the card and the 40px gaps above/below it
-      // stay exact regardless of viewport width.
-      if (stack) stack.style.height = `${scaledCardHeight}px`;
-
-      // The frame hugs its content, so center it in the viewport and size the
-      // scroll track from the measured frame height in JS.
-      const wrapStyle = getComputedStyle(wrap);
-      const padTop = parseFloat(wrapStyle.paddingTop) || 0;
-      const padBottom = parseFloat(wrapStyle.paddingBottom) || 0;
-      const sectionHeight = section.offsetHeight;
-      const pinScroll = (total - 1) * PIN_PER_CARD;
-      wrap.style.minHeight = `${sectionHeight + pinScroll + padTop + padBottom}px`;
-      const stickyTop = (window.innerHeight - sectionHeight) / 2;
-      section.style.top = `${stickyTop}px`;
-
-      // The section is position: sticky, so its own rect is frozen while pinned.
-      // Progress must be derived from the wrapper, which scrolls normally.
-      const wrapRect = wrap.getBoundingClientRect();
-      const pinDistance = Math.max(1, wrap.offsetHeight - padTop - padBottom - sectionHeight);
-      const scrolled = stickyTop - (wrapRect.top + padTop);
-      const progress = Math.min(1, Math.max(0, scrolled / pinDistance));
-
-      const segment = total > 1 ? 1 / (total - 1) : 1;
-      const arrivals = cards.map((_, i) => {
-        if (i === 0) return 1;
-        return Math.min(1, Math.max(0, (progress - (i - 1) * segment) / segment));
-      });
-
-      // Distance needed to push a card from its resting position fully below the
-      // frame's bottom edge, so overflow:hidden hides it before it slides up.
-      const sectionRect = section.getBoundingClientRect();
-      const restingTop = stack ? stack.getBoundingClientRect().top : sectionRect.bottom;
-      const hideDistance = Math.max(0, sectionRect.bottom - restingTop) + scaledCardHeight;
-
-      for (let i = 0; i < total; i += 1) {
-        const el = itemRefs.current[i];
-        if (!el) continue;
-
-        let depth = 0;
-        for (let j = i + 1; j < total; j += 1) depth += arrivals[j];
-
-        const enter = (1 - arrivals[i]) * hideDistance;
-        const translateY = enter - depth * STACK_PEEK * fitScale;
-        const scale = fitScale * (1 - depth * STACK_SCALE_STEP);
-
-        el.style.transform = `translateY(${translateY}px) scale(${scale})`;
-        el.style.zIndex = String(i + 1);
-        el.style.setProperty("--fit-scale", String(fitScale));
-      }
-    };
-
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(apply);
-    };
-
-    apply();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, [reducedMotion]);
-
   return (
-    <div ref={wrapRef} className="goal-cards-wrap flex w-full justify-center self-stretch py-12">
-      <section
-        ref={sectionRef}
-        className="goal-cards-section rounded-[32px] bg-gradient-to-b from-[#3f1b04] to-[#a5470a]"
-        aria-label="Built around your goal"
+    <div
+      className="bg-gradient-to-b content-stretch flex flex-col from-[#160a04] gap-[32px] h-[824.2px] items-center justify-center overflow-clip p-[44px] relative rounded-[44px] shrink-0 to-[#d2ad8d] w-full"
+      data-node-id="982:24226"
+    >
+      <div className="content-stretch flex flex-col items-center relative shrink-0 w-[502px] max-w-full z-[1]" data-node-id="982:24227">
+        <p
+          className="[word-break:break-word] font-aeonik font-normal leading-[56px] relative shrink-0 text-[48px] text-white text-center tracking-[-0.96px] whitespace-pre"
+          data-node-id="982:24229"
+        >
+          {`Investing designed `}
+          <br aria-hidden />
+          {`for you `}
+        </p>
+      </div>
+
+      <div
+        className="content-stretch flex gap-[12px] h-[517px] items-start relative shrink-0 w-[870px] max-w-full z-[1]"
+        data-node-id="982:24230"
       >
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-          <img
-            src={goalBgGlow}
-            alt=""
-            className="absolute bottom-[-28%] left-1/2 h-[72%] w-[120%] max-w-none -translate-x-1/2"
-          />
-        </div>
-
-        <div className="relative z-[1] flex shrink-0 flex-col items-center gap-3 px-6 pb-[80px] pt-20 text-center text-white">
-          <p className="font-aeonik font-normal text-[48px] leading-[56px] tracking-[-0.96px]">
-            Built around your goal
-          </p>
-        </div>
-
-        {reducedMotion ? (
-          <div className="relative z-[2] flex flex-1 flex-col items-center justify-center gap-4 px-6 py-4">
-            {cards.map((card) => (
-              <GoalCard key={card.title} {...card} />
-            ))}
+        <div
+          className="bg-[#d8c9b9] content-stretch flex flex-col h-full items-start justify-end overflow-clip p-[12px] relative rounded-[44px] shrink-0 w-[424px]"
+          data-node-id="982:24231"
+        >
+          <div className="absolute h-[640px] left-[-70px] top-[-89px] w-[1142px] pointer-events-none" data-node-id="1013:26420">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHalalCouple} loading="lazy" decoding="async" />
           </div>
-        ) : (
-          <div className="goal-cards-stage relative z-[2]">
-            <ul ref={stackRef} className="goal-cards-stack">
-              {cards.map((card, index) => (
-                <li
-                  key={card.title}
-                  className="goal-cards-stack__item"
-                  ref={(el) => {
-                    itemRefs.current[index] = el;
-                  }}
-                >
-                  <GoalCard {...card} />
-                </li>
-              ))}
-            </ul>
+          <div
+            className="backdrop-blur-[19px] bg-white content-stretch flex flex-col gap-[8.936px] items-start px-[32px] py-[24px] relative rounded-[32px] shrink-0 w-full"
+            data-node-id="1013:26431"
+          >
+            <div
+              className="bg-gradient-to-b border border-solid border-white content-stretch flex from-white items-center p-[12px] relative rounded-[48px] shadow-[0px_4px_33px_0px_rgba(0,0,0,0.16)] shrink-0 to-[rgba(255,255,255,0.8)]"
+              data-node-id="1013:26432"
+            >
+              <div className="relative shrink-0 size-[24px]" data-node-id="1013:26433">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMoonStar} />
+              </div>
+            </div>
+            <p
+              className="[word-break:break-word] font-aeonik font-normal leading-[32.765px] min-w-full relative shrink-0 text-[23.829px] text-black"
+              data-node-id="1013:26434"
+            >
+              Invest the halal way
+            </p>
+            <p
+              className="[word-break:break-word] font-aeonik font-normal leading-[23.829px] min-w-full relative shrink-0 text-[17.872px] text-[rgba(0,0,0,0.6)]"
+              data-node-id="1013:26435"
+            >
+              Your beliefs and your investments belong together. Our Shariah-compliant tools are designed with exactly that in mind.
+            </p>
           </div>
-        )}
-
-        <div className="relative z-[3] flex shrink-0 justify-center px-6 pb-12 pt-[40px]">
-          <Button>Create account</Button>
         </div>
-      </section>
+
+        <div
+          className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] h-full items-start justify-center min-w-px relative"
+          data-node-id="982:24239"
+        >
+          <div
+            className="bg-[#f2d2a9] content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
+            data-node-id="982:24293"
+          >
+            <div className="absolute blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
+            </div>
+            <div
+              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-[#271810] w-[200px] z-[1]"
+              data-node-id="982:24294"
+            >
+              <p className="font-aeonik font-normal leading-[32.765px] relative shrink-0 text-[26px] w-[194px]" data-node-id="982:24295">
+                Build cross-border legacy
+              </p>
+              <div className="font-inter font-normal leading-[20px] relative shrink-0 text-[14px] tracking-[-0.14px] whitespace-pre-wrap" data-node-id="982:24296">
+                <p>Life as an expat is a journey. Build wealth that keeps up &ndash; wherever you live, invest, support your loved ones, or move next.</p>
+              </div>
+            </div>
+            <div className="absolute left-[-149px] mix-blend-hard-light size-[331px] top-[-8px] pointer-events-none z-[2]" data-node-id="1013:26449">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div
+            className="content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
+            data-node-id="982:24240"
+            style={{ backgroundImage: ORANGE_GRADIENT }}
+          >
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[293px] left-[calc(50%-10px)] top-[calc(50%-19.75px)] w-[522px] pointer-events-none" data-node-id="1013:26429">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRetireMan} loading="lazy" decoding="async" />
+            </div>
+            <div className="absolute h-[987.347px] left-[-723.43px] opacity-30 top-[-11.29px] w-[1465.778px] pointer-events-none" data-node-id="982:24245">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRetireMask} />
+            </div>
+            <div
+              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-white w-[200px] z-[1]"
+              data-node-id="982:24264"
+            >
+              <p className="font-aeonik font-normal leading-[32.765px] relative shrink-0 text-[26px] w-full" data-node-id="982:24265">
+                Retire early. Actually.
+              </p>
+              <div className="font-inter font-normal leading-[20px] relative shrink-0 text-[14px] tracking-[-0.14px] whitespace-pre-wrap" data-node-id="982:24267">
+                <p className="mb-0">{`Build a portfolio that works while you don't. `}</p>
+                <p>Start now, step back sooner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="content-stretch flex flex-col items-center relative shrink-0 z-[1]" data-node-id="982:24297">
+        <Button>Create account</Button>
+      </div>
     </div>
   );
 }

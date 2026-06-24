@@ -10,7 +10,7 @@ export default function DownloadCUSP() {
             <p className="leading-[29px]">This is your CUSP of change</p>
           </div>
           <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[48px] text-black tracking-[-0.96px] w-[434px]" data-node-id="982:22714">
-            Download CUSP
+            Download app
           </p>
           <div className="absolute h-[638px] right-[189px] top-[-50.47px] w-[312.146px]" data-node-id="982:24055" data-name="image 583338">
             <img alt="CUSP app on phone" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPhone} loading="lazy" decoding="async" />

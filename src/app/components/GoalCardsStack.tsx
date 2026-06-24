@@ -71,7 +71,7 @@ export default function GoalCardsStack() {
             className="bg-[#f2d2a9] content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
             data-node-id="982:24293"
           >
-            <div className="absolute blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
+            <div className="absolute box-content blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
             </div>
             <div

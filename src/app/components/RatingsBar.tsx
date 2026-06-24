@@ -5,7 +5,7 @@ import imgTrustpilot from "../../assets/sections/ratings-trustpilot.svg";
 
 function Stars() {
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0">
+    <div className="content-stretch flex gap-[4px] items-center relative shrink-0">
       {Array.from({ length: 5 }).map((_, i) => (
         <div key={i} className="relative shrink-0 size-[16px]" data-name="star">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgStar} />
@@ -19,7 +19,7 @@ export default function RatingsBar() {
   return (
     <div className="content-stretch flex flex-col items-center px-[111px] py-[27px] relative shrink-0 w-full" data-node-id="968:22586">
       <div className="content-stretch flex gap-[41px] items-center relative shrink-0" data-node-id="968:22554">
-        <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-node-id="968:22555">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="968:22555">
           <div className="relative shrink-0 size-[32px]" data-name="appstore">
             <img alt="App Store" className="absolute block inset-0 max-w-none size-full" src={imgAppStore} />
           </div>
@@ -28,7 +28,7 @@ export default function RatingsBar() {
             4.8
           </p>
         </div>
-        <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-node-id="968:22564">
+        <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="968:22564">
           <div className="relative shrink-0 size-[32px]" data-name="google-play-store">
             <img alt="Google Play" className="absolute block inset-0 max-w-none size-full" src={imgGooglePlay} />
           </div>

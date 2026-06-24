@@ -26,16 +26,16 @@ const slides: Slide[] = [
     image: imgSlide2,
   },
   {
+    title: "Align your ambitions & principles",
+    description:
+      "Explore 1,300+ Shariah-compliant stocks and ETFs screened to trusted standards. Grow your portfolio in line with your values.",
+    image: imgSlide4,
+  },
+  {
     title: "A portfolio built around your goal",
     description:
       "Remove conflict between financial decisions and personal moral values with our shariah investment tools",
     image: imgSlide3,
-  },
-  {
-    title: "Shariah screening",
-    description:
-      "Curated Shariah-compliant stocks and ETFs, screened to trusted standards \u2014 so your portfolio can grow without compromise",
-    image: imgSlide4,
   },
 ];
 
@@ -102,8 +102,8 @@ export default function InvestWays() {
       style={{ height: `${count * 100}vh` }}
       data-node-id="827:2593"
     >
-      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden px-[24px]">
-        <div className="flex w-full max-w-[1100px] flex-col items-center rounded-[32px] bg-[#fafafa] px-[44px] py-[64px]">
+      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-visible px-[24px]">
+        <div className="flex w-full max-w-[1100px] -translate-y-[40px] flex-col items-center rounded-[32px] bg-[#fafafa] px-[44px] py-[64px]">
           <div className="flex w-full items-center justify-between gap-[40px]">
           <div className="flex w-[383px] shrink-0 items-start gap-[29px]">
             <div className="relative w-[4px] shrink-0" style={{ height: TRACK_HEIGHT }}>
@@ -129,7 +129,7 @@ export default function InvestWays() {
             </div>
           </div>
 
-          <div className="relative h-[418px] w-[554px] shrink-0">
+          <div className="relative h-[418px] w-[554px] shrink-0 overflow-hidden rounded-[32px]">
             <img
               src={slide.image}
               alt=""

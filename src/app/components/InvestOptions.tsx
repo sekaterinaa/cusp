@@ -1,7 +1,7 @@
 import Button from "./Button";
-import investStocks from "../../assets/sections/invest-stocks.png";
-import investGold from "../../assets/sections/invest-gold.png";
-import investEtfs from "../../assets/sections/invest-etfs.png";
+import investStocks from "../../assets/sections/invest-stocks-logos.png";
+import investGold from "../../assets/sections/invest-halal-logos.png";
+import investEtfs from "../../assets/sections/invest-etfs-logos.png";
 
 type Option = {
   title: string;
@@ -16,21 +16,21 @@ const options: Option[] = [
     description:
       "Access 10,000+ US-listed stocks \u2013 from global giants to emerging names \u2013 with $0 trading fees.",
     image: investStocks,
-    imageClassName: "h-[56px] w-auto",
+    imageClassName: "h-[127px] w-[198px]",
   },
   {
     title: "Halal assets",
     description:
       "Discover over 1,300 Shariah-compliant assets, so your investments stay true to your faith.",
     image: investGold,
-    imageClassName: "size-[127px]",
+    imageClassName: "h-[127px] w-[246px]",
   },
   {
     title: "ETFs",
     description:
       "Diversify across markets with a single investment \u2013 ETFs give you broad exposure.",
     image: investEtfs,
-    imageClassName: "h-[56px] w-auto",
+    imageClassName: "h-[127px] w-[198px]",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function InvestOptions() {
                 className="bg-[#fafafa] border border-[#f6f6f6] border-solid content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-center min-w-px overflow-clip p-[32px] relative rounded-[24px] self-stretch"
               >
                 <div className="flex h-[127px] items-center justify-center relative shrink-0">
-                  <img src={option.image} alt="" className={option.imageClassName} />
+                  <img src={option.image} alt="" className={`object-contain ${option.imageClassName}`} />
                 </div>
                 <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 text-black text-center w-full">
                   <p className="font-aeonik font-normal leading-[29px] relative shrink-0 text-[26px] tracking-[-0.026px] w-full">

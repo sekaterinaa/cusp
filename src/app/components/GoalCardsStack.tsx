@@ -2,6 +2,7 @@ import Button from "./Button";
 import imgHalalCouple from "../../assets/sections/goal/halal-couple.png";
 import imgMoonStar from "../../assets/sections/goal/moon-star.svg";
 import imgLegacyCoins from "../../assets/sections/goal/legacy-coins.png";
+import imgLegacyCoinsBlur from "../../assets/sections/goal/legacy-coins-blur.png";
 import imgRetireMan from "../../assets/sections/goal/retire-man.png";
 
 const RETIRE_GRADIENT =
@@ -81,17 +82,17 @@ export default function GoalCardsStack() {
                 <p>Life as an expat is a journey. Build wealth that keeps up &ndash; wherever you live, invest, support your loved ones, or move next.</p>
               </div>
             </div>
-            <div className="absolute h-[253px] left-0 top-0 w-[181px] pointer-events-none" data-node-id="1162:6788">
-              <div className="absolute flex items-center justify-center left-[-214.52px] size-[395.972px] top-[-55.16px]">
+            <div className="absolute h-[253px] left-0 top-0 w-[181px] pointer-events-none" data-node-id="1193:6482">
+              <div className="absolute flex items-center justify-center left-[-207.52px] size-[395.972px] top-[-50.16px]">
                 <div className="flex-none rotate-[15deg]">
-                  <div className="blur-[16.5px] opacity-50 relative size-[323.309px]" data-node-id="1162:6789">
-                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
+                  <div className="blur-[16.5px] opacity-40 relative size-[323.309px]" data-node-id="1193:6483">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoinsBlur} loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
-              <div className="absolute flex items-center justify-center left-[-214.52px] size-[395.972px] top-[-76.16px]">
-                <div className="flex-none rotate-[15deg]">
-                  <div className="relative size-[323.309px]" data-node-id="1162:6786">
+              <div className="absolute flex items-center justify-center left-[-189.33px] size-[405.586px] top-[-76.29px]">
+                <div className="flex-none rotate-[14.45deg]">
+                  <div className="relative size-[333.034px]" data-node-id="1193:6486">
                     <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
                   </div>
                 </div>

@@ -51,7 +51,9 @@ const FADE_MS = 350;
 
 export default function InvestWays() {
   const wrapRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+  const [topOffset, setTopOffset] = useState(0);
   const count = slides.length;
 
   useEffect(() => {
@@ -61,8 +63,16 @@ export default function InvestWays() {
     let raf = 0;
     const apply = () => {
       raf = 0;
+      // Center the card vertically by sizing the sticky offset to the gap
+      // between the viewport and the card, instead of using a full-height
+      // sticky box (which would leave half a viewport of empty space).
+      const vh = window.innerHeight;
+      const cardH = cardRef.current?.offsetHeight ?? vh;
+      const offset = Math.max(0, (vh - cardH) / 2);
+      setTopOffset(offset);
+
       const rect = wrap.getBoundingClientRect();
-      const dist = wrap.offsetHeight - window.innerHeight;
+      const dist = wrap.offsetHeight - cardH - offset;
       const p = dist > 0 ? Math.min(1, Math.max(0, -rect.top / dist)) : 0;
       setProgress(p);
     };
@@ -105,12 +115,18 @@ export default function InvestWays() {
   return (
     <div
       ref={wrapRef}
-      className="relative w-full bg-white"
+      className="relative -mt-[40px] w-full bg-white"
       style={{ height: `${count * 100}vh` }}
       data-node-id="827:2593"
     >
-      <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-visible px-[24px]">
-        <div className="flex w-full max-w-[1100px] -translate-y-[40px] flex-col items-center rounded-[60px] bg-[#fafafa] px-[44px] py-[64px]">
+      <div
+        className="sticky flex w-full justify-center overflow-visible px-[24px]"
+        style={{ top: topOffset }}
+      >
+        <div
+          ref={cardRef}
+          className="flex w-full max-w-[1100px] flex-col items-center rounded-[60px] bg-[#fafafa] px-[44px] py-[64px]"
+        >
           <div className="flex w-full items-center justify-between gap-[40px]">
           <div className="flex w-[383px] shrink-0 items-start gap-[29px]">
             <div className="relative w-[4px] shrink-0" style={{ height: TRACK_HEIGHT }}>

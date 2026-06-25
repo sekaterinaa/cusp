@@ -23,7 +23,7 @@ const options: Option[] = [
     description:
       "Discover over 1,300 Shariah-compliant assets, so your investments stay true to your faith.",
     image: investGold,
-    imageClassName: "h-[127px] w-[246px]",
+    imageClassName: "h-[127px] w-[198px]",
   },
   {
     title: "ETFs",

@@ -21,14 +21,14 @@ export default function Footer() {
             <div className="h-[21px] relative shrink-0 w-[140px]" data-node-id="1162:6738" data-name="logo">
               <img alt="CUSP" className="absolute block inset-0 max-w-none size-full" src={imgLogo} />
             </div>
-            <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="1162:6739">
-              <a href="https://www.instagram.com/cuspwealth" target="_blank" rel="noreferrer" aria-label="Instagram" className="overflow-clip relative shrink-0 size-[24px]" data-node-id="1162:6740">
+            <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-node-id="1162:6739">
+              <a href="https://www.instagram.com/cuspwealth" target="_blank" rel="noreferrer" aria-label="Instagram" className="overflow-clip relative shrink-0 size-[32px]" data-node-id="1162:6740">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgInstagram} />
               </a>
-              <a href="https://www.linkedin.com/company/cuspwealth" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="overflow-clip relative shrink-0 size-[24px]" data-node-id="1162:6744">
+              <a href="https://www.linkedin.com/company/cuspwealth" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="overflow-clip relative shrink-0 size-[32px]" data-node-id="1162:6744">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLinkedin} />
               </a>
-              <a href="https://wa.me/" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="overflow-clip relative shrink-0 size-[24px]" data-node-id="1162:6748">
+              <a href="https://wa.me/" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="overflow-clip relative shrink-0 size-[32px]" data-node-id="1162:6748">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgWhatsapp} />
               </a>
             </div>

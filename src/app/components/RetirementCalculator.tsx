@@ -12,7 +12,7 @@ export default function RetirementCalculator() {
   return (
     <div className="content-stretch flex flex-col items-start px-[14px] relative shrink-0 w-full" data-node-id="928:19281">
       <div
-        className="content-stretch flex flex-col items-center overflow-clip px-0 py-[32px] relative rounded-[32px] shrink-0 w-full"
+        className="box-content content-stretch flex flex-col items-center overflow-clip px-0 py-[32px] relative rounded-[32px] shrink-0 w-full"
         data-node-id="928:19282"
       >
         <div className="content-stretch flex flex-col gap-[56px] items-center pb-[22.992px] pt-[45.984px] relative shrink-0 w-[748.202px] max-w-full" data-node-id="928:19283">
@@ -29,7 +29,7 @@ export default function RetirementCalculator() {
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[3.832px] items-start min-w-px relative" data-node-id="928:19291">
                     <p className="[word-break:break-word] font-inter font-normal leading-[12.454px] relative shrink-0 text-[12px] text-[#080807] tracking-[-0.144px] w-full" data-node-id="928:19292">{`Portfolio `}</p>
                     <div className="content-stretch flex flex-col gap-[4px] items-start relative rounded-tl-[1.916px] rounded-tr-[1.916px] shrink-0 w-full" data-node-id="928:19293">
-                      <div className="bg-[#f5f2f0] content-stretch flex gap-[5.748px] items-center p-[8px] relative rounded-[7.664px] shrink-0 w-full" data-node-id="928:19294">
+                      <div className="bg-[#f5f5f5] content-stretch flex gap-[5.748px] items-center p-[8px] relative rounded-[7.664px] shrink-0 w-full" data-node-id="928:19294">
                         <div className="content-stretch flex flex-[1_0_0] gap-[1.916px] items-center min-w-px relative" data-node-id="928:19297">
                           <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
                             <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-center min-w-px py-[8px] relative" data-node-id="928:19298">
@@ -62,7 +62,7 @@ export default function RetirementCalculator() {
                       $20,000
                     </p>
                   </div>
-                  <div className="bg-[#f6f3f0] h-[32px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19308">
+                  <div className="bg-[#f5f5f5] h-[32px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19308">
                     <div className="absolute bg-[#080807] inset-[0_120.9px_-0.33px_0] rounded-[32px]" data-node-id="928:19309" />
                     <div className="-translate-y-1/2 absolute h-[28px] right-[122.9px] top-[calc(50%-0.46px)] w-[29px]" data-node-id="928:19310">
                       <div className="absolute inset-[-10.26%_-13.21%_-17.11%_-13.21%]">
@@ -80,7 +80,7 @@ export default function RetirementCalculator() {
                       $1,500
                     </p>
                   </div>
-                  <div className="bg-[#f6f3f0] h-[32px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19315">
+                  <div className="bg-[#f5f5f5] h-[32px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19315">
                     <div className="absolute bg-[#080807] inset-[0_120.9px_-0.33px_0] rounded-[32px]" data-node-id="928:19316" />
                     <div className="-translate-y-1/2 absolute h-[28px] right-[122.45px] top-[calc(50%-0.46px)] w-[29px]" data-node-id="928:19317">
                       <div className="absolute inset-[-10.26%_-13.21%_-17.11%_-13.21%]">
@@ -92,7 +92,7 @@ export default function RetirementCalculator() {
               </div>
             </div>
             <div
-              className="bg-white content-stretch drop-shadow-[0px_4px_94.5px_rgba(121,81,45,0.17)] flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px pb-[24px] pt-[48px] px-[48px] relative rounded-[64px] self-stretch"
+              className="bg-white content-stretch drop-shadow-[0px_4px_16.5px_rgba(0,0,0,0.09)] flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px pb-[24px] pt-[48px] px-[48px] relative rounded-[48px] self-stretch"
               data-node-id="928:19318"
             >
               <div className="[word-break:break-word] content-stretch flex gap-[15.328px] items-center leading-[0] relative shrink-0 w-full whitespace-nowrap" data-node-id="928:19320">

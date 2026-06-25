@@ -110,7 +110,7 @@ export default function InvestWays() {
       data-node-id="827:2593"
     >
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-visible px-[24px]">
-        <div className="flex w-full max-w-[1100px] -translate-y-[40px] flex-col items-center rounded-[32px] bg-[#fafafa] px-[44px] py-[64px]">
+        <div className="flex w-full max-w-[1100px] -translate-y-[40px] flex-col items-center rounded-[60px] bg-[#fafafa] px-[44px] py-[64px]">
           <div className="flex w-full items-center justify-between gap-[40px]">
           <div className="flex w-[383px] shrink-0 items-start gap-[29px]">
             <div className="relative w-[4px] shrink-0" style={{ height: TRACK_HEIGHT }}>

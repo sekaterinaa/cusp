@@ -4,6 +4,7 @@ import imgSlide1 from "../../assets/way-slide-1.png";
 import imgSlide2 from "../../assets/way-slide-2.png";
 import imgSlide3 from "../../assets/way-slide-3.png";
 import imgSlide4 from "../../assets/way-slide-4.png";
+import imgSlide5 from "../../assets/way-slide-5.png";
 
 type Slide = {
   title: string;
@@ -36,6 +37,12 @@ const slides: Slide[] = [
     description:
       "Remove conflict between financial decisions and personal moral values with our shariah investment tools",
     image: imgSlide3,
+  },
+  {
+    title: "Get professional human guidance",
+    description:
+      "Not sure which assets are right for your portfolio? Speak with a CUSP Wealth financial advisor \u2013 your first call is on us.",
+    image: imgSlide5,
   },
 ];
 
@@ -109,7 +116,7 @@ export default function InvestWays() {
             <div className="relative w-[4px] shrink-0" style={{ height: TRACK_HEIGHT }}>
               <div className="absolute inset-0 rounded-[32px] bg-black/10" />
               <div
-                className="absolute left-0 w-[4px] rounded-[32px] bg-[#e0842b]"
+                className="absolute left-0 w-[4px] rounded-[32px] bg-[#e17105]"
                 style={{ height: thumbHeight, top: thumbTop }}
               />
             </div>

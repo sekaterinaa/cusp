@@ -5,8 +5,8 @@ import imgLegacyCoins from "../../assets/sections/goal/legacy-coins.png";
 import imgRetireMan from "../../assets/sections/goal/retire-man.png";
 import imgRetireMask from "../../assets/sections/goal/retire-mask.svg";
 
-const ORANGE_GRADIENT =
-  "linear-gradient(182.84695752350353deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)";
+const RETIRE_GRADIENT =
+  "linear-gradient(194.67599399443316deg, rgb(210, 173, 141) 2.1601%, rgb(250, 247, 238) 103.92%)";
 
 export default function GoalCardsStack() {
   return (
@@ -33,7 +33,7 @@ export default function GoalCardsStack() {
           className="bg-[#d8c9b9] content-stretch flex flex-col h-full items-start justify-end overflow-clip p-[12px] relative rounded-[44px] shrink-0 w-[424px]"
           data-node-id="982:24231"
         >
-          <div className="absolute h-[640px] left-[-70px] top-[-89px] w-[1142px] pointer-events-none" data-node-id="1013:26420">
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[711.896px] left-[calc(50%+140.26px)] top-[calc(50%-46.23px)] w-[1260.648px] pointer-events-none" data-node-id="1162:6849">
             <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgHalalCouple} loading="lazy" decoding="async" />
           </div>
           <div
@@ -71,7 +71,7 @@ export default function GoalCardsStack() {
             className="bg-[#f2d2a9] content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
             data-node-id="982:24293"
           >
-            <div className="absolute box-content blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
+            <div className="absolute blur-[26.5px] left-[-149px] opacity-70 size-[331px] top-[-8px] pointer-events-none" data-node-id="1013:26451">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLegacyCoins} loading="lazy" decoding="async" />
             </div>
             <div
@@ -93,16 +93,20 @@ export default function GoalCardsStack() {
           <div
             className="content-stretch flex flex-[1_0_0] flex-col items-end min-h-px overflow-clip px-[12px] py-[32px] relative rounded-[32px] w-full"
             data-node-id="982:24240"
-            style={{ backgroundImage: ORANGE_GRADIENT }}
+            style={{ backgroundImage: RETIRE_GRADIENT }}
           >
-            <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[293px] left-[calc(50%-10px)] top-[calc(50%-19.75px)] w-[522px] pointer-events-none" data-node-id="1013:26429">
-              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRetireMan} loading="lazy" decoding="async" />
-            </div>
             <div className="absolute h-[987.347px] left-[-723.43px] opacity-30 top-[-11.29px] w-[1465.778px] pointer-events-none" data-node-id="982:24245">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRetireMask} />
             </div>
+            <div className="absolute flex h-[398.305px] items-center justify-center left-[-241.95px] top-[-11.29px] w-[713.05px] pointer-events-none" data-node-id="1162:6882">
+              <div className="-scale-y-100 flex-none rotate-180">
+                <div className="h-[398.305px] relative w-[713.05px]">
+                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRetireMan} loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </div>
             <div
-              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-white w-[200px] z-[1]"
+              className="[word-break:break-word] content-stretch flex flex-col gap-[8.936px] items-start relative shrink-0 text-black w-[200px] z-[1]"
               data-node-id="982:24264"
             >
               <p className="font-aeonik font-normal leading-[32.765px] relative shrink-0 text-[26px] w-full" data-node-id="982:24265">

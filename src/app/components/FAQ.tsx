@@ -69,14 +69,18 @@ const faqs: FaqItem[] = [
 
 function Chevron({ open }: { open: boolean }) {
   return (
-    <div
-      className={`flex items-center justify-center relative shrink-0 size-[46px] transition-transform duration-200 ${
-        open ? "rotate-180" : ""
-      }`}
-    >
-      <svg className="block size-[46px]" fill="none" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+    <div className="overflow-clip relative shrink-0 size-[46px]">
+      <svg
+        className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 block size-[28px] transition-transform duration-200 ${
+          open ? "rotate-180" : ""
+        }`}
+        fill="none"
+        viewBox="0 0 28 28"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden
+      >
         <path
-          d="M15 19.5L23 27.5L31 19.5"
+          d="M8 11.5L14 17.5L20 11.5"
           stroke="#1d1611"
           strokeWidth="2"
           strokeLinecap="round"
@@ -88,16 +92,16 @@ function Chevron({ open }: { open: boolean }) {
 }
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number>(3);
+  const [openIndex, setOpenIndex] = useState<number>(faqs.length - 1);
 
   return (
-    <div className="bg-[#fcf8ef] content-stretch flex flex-col items-center py-[80px] relative shrink-0 w-full" data-node-id="982:24589">
+    <div className="bg-white content-stretch flex flex-col items-center py-[80px] relative shrink-0 w-full" data-node-id="982:24589">
       <div className="content-stretch flex flex-col gap-[60px] items-center relative shrink-0 w-full" data-node-id="982:24590">
         <p className="[word-break:break-word] font-aeonik font-normal leading-[56px] not-italic relative shrink-0 text-[#1d1611] text-[48px] text-center tracking-[-0.96px]" data-node-id="982:24592">
           FAQ
         </p>
-        <div className="content-stretch flex flex-col items-center px-[200px] relative shrink-0 w-full" data-node-id="982:24593">
-          <div className="content-stretch flex flex-col gap-[9px] items-start relative shrink-0 w-full" data-node-id="982:24595">
+        <div className="content-stretch flex flex-col items-center px-[24px] relative shrink-0 w-full" data-node-id="982:24593">
+          <div className="content-stretch flex flex-col gap-[9px] items-start relative shrink-0 w-full max-w-[680px]" data-node-id="982:24595">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
@@ -106,17 +110,17 @@ export default function FAQ() {
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     aria-expanded={isOpen}
-                    className={`bg-white content-stretch flex gap-[16px] items-center justify-between px-[24px] py-[12px] relative shrink-0 text-left w-full ${
-                      isOpen ? "rounded-tl-[16px] rounded-tr-[16px]" : "rounded-[16px]"
+                    className={`bg-[#fafafa] content-stretch flex gap-[16px] items-center justify-between px-[24px] py-[12px] relative shrink-0 text-left w-full rounded-[16px] ${
+                      isOpen ? "mb-[-11px] z-[1]" : ""
                     }`}
                   >
-                    <p className="[word-break:break-word] font-aeonik font-normal leading-[29px] not-italic relative shrink-0 text-[24px] text-black tracking-[-0.48px]">
+                    <p className="[word-break:break-word] font-aeonik font-normal leading-[29px] not-italic relative shrink-0 text-[23px] text-black tracking-[-0.46px]">
                       {faq.question}
                     </p>
                     <Chevron open={isOpen} />
                   </button>
                   {isOpen && (
-                    <div className="bg-[#fffcf8] content-stretch flex items-center p-[24px] relative rounded-bl-[16px] rounded-br-[16px] shrink-0 w-full">
+                    <div className="bg-[#fafafa] content-stretch flex items-center p-[24px] relative rounded-bl-[16px] rounded-br-[16px] shrink-0 w-full">
                       <div className="[word-break:break-word] flex-[1_0_0] font-inter font-normal leading-[0] min-w-px not-italic relative text-[#0f0a08] text-[16px] whitespace-pre-wrap">
                         {faq.answer}
                       </div>

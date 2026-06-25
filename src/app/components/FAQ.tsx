@@ -71,7 +71,7 @@ function Chevron({ open }: { open: boolean }) {
   return (
     <div className="overflow-clip relative shrink-0 size-[46px]">
       <svg
-        className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 block size-[28px] transition-transform duration-200 ${
+        className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 block size-[28px] transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           open ? "rotate-180" : ""
         }`}
         fill="none"
@@ -110,8 +110,8 @@ export default function FAQ() {
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     aria-expanded={isOpen}
-                    className={`bg-[#fafafa] content-stretch flex gap-[16px] items-center justify-between px-[24px] py-[12px] relative shrink-0 text-left w-full rounded-[16px] ${
-                      isOpen ? "mb-[-11px] z-[1]" : ""
+                    className={`bg-[#fafafa] content-stretch flex gap-[16px] items-center justify-between px-[24px] py-[12px] relative shrink-0 text-left w-full z-[1] transition-[border-radius] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                      isOpen ? "rounded-t-[16px] rounded-b-none" : "rounded-[16px]"
                     }`}
                   >
                     <p className="[word-break:break-word] font-aeonik font-normal leading-[29px] not-italic relative shrink-0 text-[23px] text-black tracking-[-0.46px]">
@@ -119,13 +119,19 @@ export default function FAQ() {
                     </p>
                     <Chevron open={isOpen} />
                   </button>
-                  {isOpen && (
-                    <div className="bg-[#fafafa] content-stretch flex items-center p-[24px] relative rounded-bl-[16px] rounded-br-[16px] shrink-0 w-full">
-                      <div className="[word-break:break-word] flex-[1_0_0] font-inter font-normal leading-[0] min-w-px not-italic relative text-[#0f0a08] text-[16px] whitespace-pre-wrap">
-                        {faq.answer}
+                  <div
+                    className={`grid w-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="bg-[#fafafa] content-stretch flex items-center pt-[12px] px-[24px] pb-[24px] relative rounded-bl-[16px] rounded-br-[16px] shrink-0 w-full">
+                        <div className="[word-break:break-word] flex-[1_0_0] font-inter font-normal leading-[0] min-w-px not-italic relative text-[#0f0a08] text-[16px] whitespace-pre-wrap">
+                          {faq.answer}
+                        </div>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

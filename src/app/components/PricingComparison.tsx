@@ -11,16 +11,18 @@ import imgBgMask from "../../assets/sections/pricing-bg-mask.svg";
 import imgBgLine from "../../assets/sections/pricing-bg-line.svg";
 
 const goldGradient =
-  "linear-gradient(-76.70672581225048deg, rgb(253, 245, 242) 68.811%, rgb(254, 227, 198) 19.004%, rgb(148, 95, 59) 43.256%, rgb(0, 0, 0) 116.19%)";
+  "linear-gradient(-76.71deg, rgba(253, 245, 242, 1) 42%, rgba(254, 227, 198, 1) 84%, rgba(148, 95, 59, 1) 47%, rgba(0, 0, 0, 1) 116.19%)";
 const goldBadgeGradient =
   "linear-gradient(-76.88304305369729deg, rgb(254, 227, 198) 8.0089%, rgb(253, 245, 242) 64.109%, rgb(148, 95, 59) 144.26%)";
 const cardGlow =
   "radial-gradient(60% 50% at 50% 0%, rgba(248, 212, 170, 0.16) 0%, rgba(248, 212, 170, 0) 100%)";
+const sectionGradient =
+  "linear-gradient(170.87865376753098deg, rgb(26, 17, 10) 9.2971%, rgb(210, 173, 141) 130.78%)";
 
 export default function PricingComparison() {
   return (
     <div className="content-stretch flex flex-col items-start px-[14px] relative shrink-0 w-full">
-    <div className="bg-[#1d1611] content-stretch flex flex-col gap-[64px] items-center overflow-clip px-[119px] py-[90px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19385">
+    <div className="content-stretch flex flex-col gap-[64px] items-center overflow-clip px-[119px] pt-[80px] pb-[40px] relative rounded-[32px] shrink-0 w-full" style={{ backgroundImage: sectionGradient }} data-node-id="928:19385">
       {/* Background chart graphic */}
       <div className="-translate-x-1/2 absolute h-[682px] left-1/2 opacity-60 pointer-events-none top-[560px] w-[1743px]" data-node-id="930:22336">
         <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBgMask} />
@@ -46,7 +48,7 @@ export default function PricingComparison() {
                   CUSP Wealth vs others
                 </p>
               </div>
-              <div className="bg-[rgba(0,0,0,0.32)] content-stretch flex flex-col gap-[16px] items-start p-[12px] relative rounded-[32px] shrink-0 w-full" data-node-id="859:11429">
+              <div className="bg-[rgba(251,237,222,0.1)] content-stretch flex flex-col gap-[16px] items-start p-[12px] relative rounded-[32px] shrink-0 w-full" data-node-id="859:11429">
                 {/* CUSP */}
                 <div className="content-stretch flex gap-[15px] items-center relative rounded-[20px] shrink-0 w-full" data-node-id="859:11430">
                   <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative">
@@ -64,7 +66,7 @@ export default function PricingComparison() {
                       <p className="font-inter font-normal leading-[16px] opacity-50 overflow-hidden relative shrink-0 text-[12px] text-ellipsis w-full">$0.00 fees per trade</p>
                     </div>
                   </div>
-                  <p className="[word-break:break-word] bg-clip-text font-inter font-medium leading-[26px] not-italic overflow-hidden relative shrink-0 text-[18px] text-[transparent] text-ellipsis text-right tracking-[-0.216px] whitespace-nowrap" style={{ backgroundImage: goldGradient }}>
+                  <p className="[word-break:break-word] bg-clip-text font-inter font-medium leading-[26px] not-italic overflow-hidden relative shrink-0 text-[20px] text-[transparent] text-ellipsis text-right tracking-[-0.24px] whitespace-nowrap" style={{ backgroundImage: goldGradient }}>
                     $0.00
                   </p>
                 </div>
@@ -150,27 +152,27 @@ export default function PricingComparison() {
         <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[15px] h-full items-start justify-center min-w-px relative" data-node-id="859:11436">
             <div className="content-stretch flex flex-[1_0_0] gap-[15px] items-start min-h-px relative w-full" data-node-id="859:11437">
-              <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-full items-center justify-center min-w-px overflow-clip pb-[126px] pl-[29px] pr-[30px] pt-[124px] relative rounded-[32px]" data-node-id="928:19405">
+              <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col h-full items-center justify-between min-w-px overflow-clip pl-[29px] pr-[30px] py-[24px] relative rounded-[32px]" data-node-id="928:19405">
                 <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
-                <p className="-translate-x-1/2 [word-break:break-word] absolute font-aeonik font-normal leading-[29.333px] left-[calc(50%-1px)] not-italic text-[28px] text-white text-center top-[179.5px] w-[212.5px]" data-node-id="859:11439">
-                  trading fees
-                </p>
-                <div className="-translate-x-1/2 absolute backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center left-[calc(50%-0.84px)] p-[18.057px] rounded-[27.086px] top-[53.5px] w-[138.814px]" data-node-id="859:11440" style={{ backgroundImage: goldBadgeGradient }}>
-                  <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-black whitespace-nowrap">
+                <div className="backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center p-[18.057px] relative rounded-[27.086px] shrink-0 w-[138.814px] z-[1]" data-node-id="859:11440" style={{ backgroundImage: goldBadgeGradient }}>
+                  <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-[#2d1f16] whitespace-nowrap">
                     $0
                   </p>
                 </div>
-              </div>
-              <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-full items-center justify-center min-w-px overflow-clip pb-[126px] pl-[29px] pr-[30px] pt-[124px] relative rounded-[32px]" data-node-id="928:19410">
-                <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
-                <p className="-translate-x-1/2 [word-break:break-word] absolute font-aeonik font-normal leading-[29.333px] left-[calc(50%-1px)] not-italic text-[28px] text-white text-center top-[159.5px] w-[212.5px]" data-node-id="859:11443">
-                  portfolio advisory fee
+                <p className="[word-break:break-word] font-aeonik font-normal leading-[29.333px] not-italic relative shrink-0 text-[28px] text-white text-center w-[212.5px] z-[1]" data-node-id="859:11439">
+                  trading fees
                 </p>
-                <div className="-translate-x-1/2 absolute backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center left-[calc(50%-0.43px)] p-[18.057px] rounded-[27.086px] top-[53.5px] w-[138.814px]" data-node-id="859:11444" style={{ backgroundImage: goldBadgeGradient }}>
-                  <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-black whitespace-nowrap">
+              </div>
+              <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-[1_0_0] flex-col h-full items-center justify-between min-w-px overflow-clip pl-[29px] pr-[30px] py-[24px] relative rounded-[32px]" data-node-id="928:19410">
+                <div aria-hidden className="absolute inset-0 pointer-events-none" style={{ background: cardGlow }} />
+                <div className="backdrop-blur-[28.214px] border-[1.129px] border-[rgba(244,205,160,0.37)] border-solid content-stretch flex h-[79px] items-center justify-center p-[18.057px] relative rounded-[27.086px] shrink-0 w-[138.814px] z-[1]" data-node-id="859:11444" style={{ backgroundImage: goldBadgeGradient }}>
+                  <p className="[word-break:break-word] font-aeonik font-semibold leading-[1.2] not-italic relative shrink-0 text-[35.982px] text-[#2d1f16] whitespace-nowrap">
                     0.75%
                   </p>
                 </div>
+                <p className="[word-break:break-word] font-aeonik font-normal leading-[29.333px] not-italic relative shrink-0 text-[28px] text-white text-center w-[212.5px] z-[1]" data-node-id="859:11443">
+                  portfolio advisory fee
+                </p>
               </div>
             </div>
             <div className="backdrop-blur-[19px] bg-[rgba(0,0,0,0.2)] content-stretch flex flex-col gap-[10px] items-start overflow-clip pl-[29px] pr-[30px] py-[45px] relative rounded-[32px] shrink-0 w-full" data-node-id="928:19415">

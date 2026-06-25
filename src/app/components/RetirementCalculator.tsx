@@ -24,7 +24,7 @@ export default function RetirementCalculator() {
                 </p>
                 <p className="font-inter font-normal leading-[24px] relative shrink-0 text-[16px] text-black tracking-[-0.16px] w-full" data-node-id="928:19288">{`Explore how your investment could look over time \u2013 with lower fees and a $25 starting deposit.`}</p>
               </div>
-              <div className="content-stretch flex flex-col gap-[15.328px] items-start relative shrink-0 w-full" data-node-id="928:19289">
+              <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-node-id="928:19289">
                 <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="928:19290">
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[3.832px] items-start min-w-px relative" data-node-id="928:19291">
                     <p className="[word-break:break-word] font-inter font-normal leading-[12.454px] relative shrink-0 text-[12px] text-[#080807] tracking-[-0.144px] w-full" data-node-id="928:19292">{`Portfolio `}</p>
@@ -95,21 +95,21 @@ export default function RetirementCalculator() {
               className="bg-white content-stretch drop-shadow-[0px_4px_16.5px_rgba(0,0,0,0.09)] flex flex-[1_0_0] flex-col gap-[24px] items-start min-w-px pb-[24px] pt-[48px] px-[48px] relative rounded-[48px] self-stretch"
               data-node-id="928:19318"
             >
-              <div className="[word-break:break-word] content-stretch flex gap-[15.328px] items-center leading-[0] relative shrink-0 w-full whitespace-nowrap" data-node-id="928:19320">
-                <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-node-id="928:19321">
-                  <div className="flex flex-col font-aeonik font-medium justify-center relative shrink-0 text-[27px] text-black tracking-[-0.108px]" data-node-id="928:19322">
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start justify-center leading-[0] relative shrink-0 w-full" data-node-id="928:19320">
+                <div className="content-stretch flex font-aeonik font-medium items-baseline justify-between relative shrink-0 text-black w-full" data-node-id="1183:7273">
+                  <div className="flex flex-col justify-center relative shrink-0 text-[27px] tracking-[-0.108px] w-[180px]" data-node-id="928:19322">
                     <p className="leading-[21.076px]">$250,000.00</p>
                   </div>
-                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[6.706px] text-ellipsis tracking-[-0.0335px]" data-node-id="928:19323">
-                    <p className="leading-[9.58px] overflow-hidden text-ellipsis">projected value in 20 years</p>
-                  </div>
-                </div>
-                <div className="content-stretch flex flex-col gap-[4px] items-start justify-center opacity-50 relative shrink-0" data-node-id="928:19324">
-                  <div className="flex flex-col font-aeonik font-medium justify-center opacity-[0.67] relative shrink-0 text-[27px] text-black tracking-[-0.108px]" data-node-id="928:19325">
+                  <div className="flex flex-col justify-center opacity-50 relative shrink-0 text-[19px] tracking-[-0.076px] whitespace-nowrap" data-node-id="928:19325">
                     <p className="leading-[21.076px]">$10,000</p>
                   </div>
-                  <div className="flex flex-col font-inter font-normal justify-center overflow-hidden relative shrink-0 text-[#474743] text-[6.706px] text-ellipsis tracking-[-0.0335px]" data-node-id="928:19326">
-                    <p className="leading-[9.58px] overflow-hidden text-ellipsis">saved on comission</p>
+                </div>
+                <div className="content-stretch flex font-inter font-normal items-center justify-between relative shrink-0 text-[#474743] text-[10px] tracking-[-0.04px] w-full whitespace-nowrap" data-node-id="1183:7274">
+                  <div className="flex flex-col justify-center overflow-hidden relative shrink-0 text-ellipsis w-[180px]" data-node-id="928:19323">
+                    <p className="leading-[13px] overflow-hidden text-ellipsis">projected value in 20 years</p>
+                  </div>
+                  <div className="flex flex-col justify-center opacity-50 overflow-hidden relative shrink-0 text-ellipsis" data-node-id="928:19326">
+                    <p className="leading-[13px] overflow-hidden text-ellipsis">saved on comission</p>
                   </div>
                 </div>
               </div>
@@ -184,10 +184,10 @@ export default function RetirementCalculator() {
                   <img alt="" className="block max-w-none size-full" src={imgLine18} />
                 </div>
               </div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(50%+96.45px)] size-[13px] top-[calc(50%-58.21px)] pointer-events-none" data-node-id="928:19358">
+              <div className="absolute bottom-[223.68px] left-[262.32px] size-[13px] pointer-events-none" data-node-id="928:19358">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCircle0} />
               </div>
-              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(50%+95.95px)] size-[14px] top-[calc(50%-19.71px)] pointer-events-none" data-node-id="928:19359">
+              <div className="absolute bottom-[183.18px] left-[261.82px] size-[14px] pointer-events-none" data-node-id="928:19359">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCircle1} />
               </div>
             </div>

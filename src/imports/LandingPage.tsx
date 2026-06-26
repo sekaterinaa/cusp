@@ -51,19 +51,19 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="content-stretch flex gap-[12px] items-center relative shrink-0" data-name="contentRight">
-              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex items-center overflow-clip px-[12px] py-[10px] relative rounded-[24px] shrink-0" data-name="searchContainer">
+              <div className="bg-[rgba(255,255,255,0.3)] backdrop-blur-[8px] border-[0.5px] border-solid border-[rgba(255,255,255,0.6)] shadow-[inset_0px_1px_0px_rgba(255,255,255,0.6),0px_4px_12px_rgba(0,0,0,0.08)] content-stretch flex items-center overflow-clip px-[12px] py-[10px] relative rounded-[24px] shrink-0" data-name="searchContainer">
                 <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                   <circle cx="9" cy="9" r="6.25" stroke="black" strokeWidth="1.25" />
                   <path d="m13.6 13.6 2.9 2.9" stroke="black" strokeWidth="1.25" strokeLinecap="round" />
                 </svg>
               </div>
-              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
+              <div className="bg-[rgba(255,255,255,0.3)] backdrop-blur-[8px] border-[0.5px] border-solid border-[rgba(255,255,255,0.6)] shadow-[inset_0px_1px_0px_rgba(255,255,255,0.6),0px_4px_12px_rgba(0,0,0,0.08)] content-stretch flex gap-[8px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
                 <p className="[word-break:break-word] font-inter font-medium leading-[20px] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.07px] whitespace-nowrap">Eng</p>
                 <svg className="block shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden>
                   <path d="m6.5 8.5 3.5 3.5 3.5-3.5" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <div className="bg-[rgba(255,255,255,0.16)] content-stretch flex flex-col gap-[4px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
+              <div className="bg-[rgba(255,255,255,0.3)] backdrop-blur-[8px] border-[0.5px] border-solid border-[rgba(255,255,255,0.6)] shadow-[inset_0px_1px_0px_rgba(255,255,255,0.6),0px_4px_12px_rgba(0,0,0,0.08)] content-stretch flex flex-col gap-[4px] items-center justify-center px-[16px] py-[10px] relative rounded-[32px] shrink-0">
                 <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
                 <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />
                 <div className="bg-black h-[2px] relative shrink-0 w-[24px]" />

@@ -29,12 +29,8 @@ export default function FinalCTA() {
           </div>
         </div>
         <div className="content-stretch flex flex-[1_0_0] flex-col h-[461px] items-start justify-between min-w-px overflow-clip px-[44px] py-[32px] relative rounded-[32px]" data-node-id="959:22471" style={{ backgroundImage: "linear-gradient(185.18786936400352deg, rgb(221, 116, 15) 11.523%, rgb(249, 245, 240) 181.22%), linear-gradient(90deg, rgb(251, 237, 222) 0%, rgb(251, 237, 222) 100%)" }}>
-          <div className="absolute flex h-[577.299px] items-center justify-center left-[135.55px] top-[48.7px] w-[582.766px]">
-            <div className="flex-none rotate-[-38.65deg]">
-              <div className="h-[395.198px] relative w-[430.155px]" data-node-id="963:22500" data-name="Слой 5 1">
-                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgGold} loading="lazy" decoding="async" />
-              </div>
-            </div>
+          <div className="absolute h-[582.766px] left-[135.55px] top-[39.53px] w-[582.766px]" data-node-id="1193:6498" data-name="image 583370">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgGold} loading="lazy" decoding="async" />
           </div>
           <p className="[word-break:break-word] font-aeonik font-normal leading-[32.765px] not-italic relative shrink-0 text-[31px] text-white w-[221px]" data-node-id="959:22473">
             Learn how we structure CUSP Personalised Portfolios

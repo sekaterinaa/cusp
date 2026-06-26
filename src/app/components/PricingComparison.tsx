@@ -12,7 +12,7 @@ import imgBgLine from "../../assets/sections/pricing-bg-line.svg";
 const goldGradient =
   "linear-gradient(-74.05921901423724deg, rgb(254, 227, 198) 8.0089%, rgb(253, 245, 242) 64.109%, rgb(148, 95, 59) 144.26%)";
 const goldBadgeGradient =
-  "linear-gradient(-76.88304305369729deg, rgb(254, 227, 198) 8.0089%, rgb(253, 245, 242) 64.109%, rgb(148, 95, 59) 144.26%)";
+  "linear-gradient(90deg, rgba(184, 140, 107, 1) 0%, rgba(239, 208, 178, 1) 100%)";
 const sectionGradient =
   "linear-gradient(170.87865376753098deg, rgb(26, 17, 10) 9.2971%, rgb(210, 173, 141) 130.78%)";
 
@@ -49,12 +49,8 @@ export default function PricingComparison() {
                 <div className="content-stretch flex gap-[15px] items-center relative rounded-[20px] shrink-0 w-full" data-node-id="859:11430">
                   <div className="content-stretch flex flex-[1_0_0] gap-[12px] items-center min-w-px relative">
                     <div className="bg-[#1a110a] overflow-clip relative rounded-[12px] shrink-0 size-[40px]">
-                      <div className="absolute flex inset-[42.78%_7.5%_42.77%_7.5%] items-center justify-center" style={{ containerType: "size" }}>
-                        <div className="-rotate-180 -scale-x-100 flex-none h-[100cqh] w-[100cqw]">
-                          <div className="relative size-full">
-                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoCusp} />
-                          </div>
-                        </div>
+                      <div className="-translate-y-1/2 absolute h-[5.078px] left-[7.51%] right-[7.52%] top-1/2">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoCusp} />
                       </div>
                     </div>
                     <div className="[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start justify-center not-italic relative shrink-0 text-[rgba(255,255,255,0.9)] w-[177px]">

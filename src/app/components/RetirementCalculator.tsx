@@ -28,8 +28,10 @@ function Slider({ value, min, max, step, onChange, ariaLabel }: SliderProps) {
   const draggingRef = useRef(false);
 
   const pct = max > min ? Math.min(1, Math.max(0, (value - min) / (max - min))) : 0;
-  // Keep the knob (and the leading edge of the fill) inside the track at the extremes.
-  const fillExpr = `calc(${pct} * (100% - ${KNOB_W}px) + ${KNOB_W / 2}px)`;
+  // Keep the knob inside the track at the extremes.
+  const knobCenter = `calc(${pct} * (100% - ${KNOB_W}px) + ${KNOB_W / 2}px)`;
+  // The fill's rounded cap wraps around the knob, so it extends to the knob's trailing edge.
+  const fillExpr = `calc(${pct} * (100% - ${KNOB_W}px) + ${KNOB_W}px)`;
 
   const updateFromClientX = (clientX: number) => {
     const el = trackRef.current;
@@ -97,7 +99,7 @@ function Slider({ value, min, max, step, onChange, ariaLabel }: SliderProps) {
       <div
         aria-hidden
         className="-translate-x-1/2 -translate-y-1/2 absolute h-[26px] pointer-events-none top-1/2 w-[27px]"
-        style={{ left: fillExpr }}
+        style={{ left: knobCenter }}
       >
         <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgKnob} />
       </div>
